@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cormorant Unicase */
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Unicase';
+    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* David Libre */
+
+@font-face {
+    font-family: "David Libre";
+    src: url("/public/fonts/david-libre/DavidLibre-Bold.woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "David Libre";
+    src: url("/public/fonts/david-libre/DavidLibre-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "David Libre";
+    src: url("/public/fonts/david-libre/DavidLibre-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Days One */
+
+@font-face {
+    font-family: "Days One";
+    src: url("/public/fonts/days-one/DaysOne-Regular.woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Forum */
+
+@font-face {
+    font-family: "Forum";
+    src: url("/public/fonts/forum-font/Forum-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8EEE3;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    border: 1px solid red;
+    justify-content: space-around;
+}
+
+#header-logo {
+    background: url("/public/images/LIGHTLAND.svg") no-repeat;
+    width: 239px;
+    height: 26px;
+}
+
+nav {
+    width: 50%;
+    min-width: 420px;
+}
+
+#main-nav {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-item a{
+    color: #653B0D;
+    font-family: "Cormorant Unicase";
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+    nav::before {
+        content: none;
+    }
+}
