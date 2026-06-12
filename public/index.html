@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LightLand</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <main>
         <header>
             <div id="header-logo"></div>
-            <nav>
+            <nav class="nav" id="nav">
                 <ul id="main-nav">
-                    <li class="main-item"><a href="#main">Главная</a></li>
-                    <li class="main-item"><a href="#about">О нас</a></li>
-                    <li class="main-item"><a href="#products">Наши товары</a></li>
-                    <li class="main-item"><a href="#services">Услуги</a></li>
-                    <li class="main-item"><a href="#contacts">Контакты</a></li>
+                    <li class="main-item" onclick="showMenu()"><a href="#main">Главная</a></li>
+                    <li class="main-item" onclick="showMenu()"><a href="#about">О нас</a></li>
+                    <li class="main-item" onclick="showMenu()"><a href="#products">Наши товары</a></li>
+                    <li class="main-item" onclick="showMenu()"><a href="#services">Услуги</a></li>
+                    <li class="main-item" onclick="showMenu()"><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
+            <button id="nav-menu-btn" onclick="showMenu()">
+                <svg id="menu-btn-icon" width="24" height="24" viewBox="0 0 160 120">
+                    <path fill="#3B2105" d="M 10 0 A 1 1 0 0 0 10 20 H 150 A 1 1 0 0 0 150 0 M 10 50 A 1 1 0 0 0 10 70 H 150 A 1 1 0 0 0 150 50 M 10 100 A 1 1 0 0 0 10 120 H 150 A 1 1 0 0 0 150 100 Z">
+                </svg>
+            </button>
         </header>
 
         <div id="main">
@@ -133,6 +139,7 @@
         </div>
 
         <div id="contacts">
+            <h1 id="contacts-title">Наши контакты</h1>
             <div id="number-and-messagers">
                 <div id="number">
                     <div id="number-title">
