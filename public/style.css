@@ -85,6 +85,67 @@ html {
     font-style: normal;
 }
 
+/* Segoe Mono Unicode */
+
+@font-face {
+    font-family: "Segoe Mono Unicode";
+    src: url("/public/fonts/SegoeMonoUnicode/SegoeMonoUnicode-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ubuntu */
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-Bold.woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-BoldItalic.woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-Italic.woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-Light.woff2");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-LightItalic.woff2");
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("/public/fonts/ubuntu-font/Ubuntu-Medium.woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -111,6 +172,7 @@ header {
 }
 
 #header-logo {
+    position: relative;
     background: url("/public/images/LIGHTLAND.svg") no-repeat;
     width: 239px;
     height: 26px;
@@ -154,10 +216,6 @@ nav {
     header {
         height: 40px;
     }
-
-    .main-item a {
-        font-size: 0.8rem;
-    }
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
@@ -174,12 +232,6 @@ nav {
 @media (max-width: 720px) {
     header {
 
-        padding-top: 10px;
-        display: grid;
-        
-        grid-template-columns: 1fr, 24px;
-        grid-template-rows: repeat(2, 1fr);
-
         width: 90%;
         max-width: 640px;
         justify-content: space-between;
@@ -187,15 +239,9 @@ nav {
 
     }
 
-    #header-logo {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
     nav {
         height: 100vh;
-        grid-row: 2;
-        grid-column: 1;
+
         top: 0;
         left: 0;
         padding-left: 5%;
@@ -210,9 +256,6 @@ nav {
     }
 
     #main-nav {
-        
-        grid-row: 2;
-        grid-column: 1;
 
         margin-top: 80px;
         height: 130px;
@@ -229,22 +272,180 @@ nav {
         z-index: 1;
     }
 
-    /* nav.show-menu::before {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #F8EEE3;
-        z-index: -1;
-    } */
-
     #nav-menu-btn {
-        grid-column: 2;
-        grid-row: 1;
         display: block;
 
         z-index: 2;
     }
 }
+
+@media (max-width: 938px) {
+    .main-item a {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* Главная */
+
+#main {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-pictures {
+    position: relative;
+    width: 100%;
+    transform: translateX(calc(-86.25%));
+
+    /* transform: translateX(calc(-82.04%)); */
+    display: flex;
+    transition: transform 1000ms ease-in-out;
+}
+
+/* .main-picture:nth-child(1){
+    margin-left: 0;
+} */
+
+
+.main-picture {
+    position: relative;
+    
+    margin-left: 60px;
+    
+    min-width: 1228px;
+    height: 670px;
+
+
+}
+
+#mp1 {
+    background: url("/public/images/main-picture1.webp") no-repeat;
+    background-size: cover;
+}
+
+#mp2 {
+    background: url("/public/images/main-picture2.webp") no-repeat;
+    background-size: cover;
+}
+
+#mp3 {
+    background: url("/public/images/main-picture3.webp") no-repeat;
+    background-size: cover;
+
+}
+
+.mp-title {
+    position: relative;
+    top: 220px;
+    left: 60px;
+    font-family: "Days One";
+    color: #FB9600;
+    text-transform: uppercase;
+    font-size: 24pt;
+
+}
+
+@media (min-width: 1600px) {
+    .mp-title {
+    font-size: 28pt;
+    }
+}
+
+#mpt1 {
+    width: 670px;
+}
+
+#mpt2 {
+    width: 500px;
+    top: 170px;
+}
+
+#mpt3 {
+    width: 700px;
+    top: 170px;
+}
+
+.mp-note {
+    position: relative;
+    top: 240px;
+    left: 60px;
+
+    font-family: "Ubuntu";
+    color: #E3DFDA;
+    font-weight: 350;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+
+}
+
+#mpn1 {
+    width: 450px;
+}
+
+#mpn2 {
+    width: 500px;
+    top: 190px
+}
+
+#mpn3 {
+    width: 400px;
+    top: 190px
+}
+
+.mp-button {
+    position: relative;
+    top: 320px;
+    left: 60px;
+
+    border: none;
+    background: #EEB338;
+    height: 44px;
+    padding: 0 50px;
+    border-radius: 20px;
+
+    font-family: "Forum";
+    font-size: 1.5rem;
+    color: #3B2105;
+}
+
+
+#underline {
+    margin-top: 18px;
+    margin-bottom: 21px;
+    width: 65%;
+    max-width: 1000px;
+    border-bottom: 4px solid #653B0D;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.scrool {
+    display: none;
+}
+
+#scrool-menu label{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 7px;
+    background: #D2A97D;
+    cursor: pointer;
+    transition: width 300ms ease-in-out;
+}
+
+#scrool-menu .scrool:checked + label {
+    background: #89541A;
+    width: 40px;
+}
+
+#scrool-menu label:hover {
+    background: #b5895a;
+} 

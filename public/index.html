@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LightLand</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <main>
@@ -29,27 +28,49 @@
 
         <div id="main">
             <div id="main-pictures">
+                <div class="main-picture" id="mp3">
+                    <h1 class="mp-title" id="mpt3">Создаем свет, в который хочется возвращаться</h1>
+                    <h3 class="mp-note" id="mpn3">Организация комфортного освещения в домах, студиях, офисах</h3>
+                    <button class="mp-button" id="mpb3" onclick="goToServices()">Узнать больше</button>
+                </div>
                 <div class="main-picture" id="mp1">
-                    <h1 class="mp-title">LIGHTLAND - ваш источник идеального света</h1>
-                    <h3 class="mp-note">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
-                    <button id="mp-button"><a>Каталог</a></button>
+                    <h1 class="mp-title" id="mpt1">LIGHTLAND - ваш источник идеального света</h1>
+                    <h4 class="mp-note" id="mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
+                    <button class="mp-button" id="mpb1" onclick="goToStore()">Каталог</button>
                 </div>
                 <div class="main-picture" id="mp2">
-                    <h1 class="mp-title">Энергоэффективность и качество</h1>
-                    <h3 class="mp-note">Экономия, долговечность и комфорт в каждом светильнике</h3>
-                    <button id="mp-button"><a href="#products">Узнать больше</a></button>
+                    <h1 class="mp-title" id="mpt2">Энергоэффективность и качество</h1>
+                    <h3 class="mp-note" id="mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
+                    <button class="mp-button" id="mpb2" onclick="goToProducts()">Узнать больше</button>
                 </div>
                 <div class="main-picture" id="mp3">
-                    <h1 class="mp-title">Создаем свет, в который хочется возвращаться</h1>
-                    <h3 class="mp-note">Организация комфортного освещения в домах, студиях, офисах</h3>
-                    <button id="mp-button"><a href="#services">Узнать больше</a></button>
+                    <h1 class="mp-title" id="mpt3">Создаем свет, в который хочется возвращаться</h1>
+                    <h3 class="mp-note" id="mpn3">Организация комфортного освещения в домах, студиях, офисах</h3>
+                    <button class="mp-button" id="mpb3" onclick="goToServices()">Узнать больше</button>
+                </div>
+                <div class="main-picture" id="mp1">
+                    <h1 class="mp-title" id="mpt1">LIGHTLAND - ваш источник идеального света</h1>
+                    <h4 class="mp-note" id="mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
+                    <button class="mp-button" id="mpb1" onclick="goToStore()">Каталог</button>
+                </div>
+                <div class="main-picture" id="mp2">
+                    <h1 class="mp-title" id="mpt2">Энергоэффективность и качество</h1>
+                    <h3 class="mp-note" id="mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
+                    <button class="mp-button" id="mpb2" onclick="goToProducts()">Узнать больше</button>
                 </div>
             </div>
+            
             <div id="underline"></div>
             <div id="scrool-menu">
-                <div class="scrool" id="s1"></div>
+                <input type="radio" name="slide-pictures" value="2" class="scrool" id="s1" checked>
+                <label for="s1"></label>
+                <input type="radio" name="slide-pictures" value="3" class="scrool" id="s2">
+                <label for="s2"></label>
+                <input type="radio" name="slide-pictures" value="5" class="scrool" id="s3">
+                <label for="s3"></label>
+                <!-- <div class="scrool" id="s1"></div>
                 <div class="scrool" id="s2"></div>
-                <div class="scrool" id="s3"></div>
+                <div class="scrool" id="s3"></div> -->
             </div>
         </div>
 
@@ -71,8 +92,8 @@
                 <li class="product-box" id="prod-pic1">Светодиодные ленты</li>
                 <li class="product-box" id="prod-pic2">Люменисцентные лампы</li>
                 <li class="product-box" id="prod-pic3">Светильники</li>
-                <li class="product-box" id="prod-pic3">Настольные лампы</li>
-                <li class="product-box" id="prod-pic3">Дизайнерские люстры</li>
+                <li class="product-box" id="prod-pic4">Настольные лампы</li>
+                <li class="product-box" id="prod-pic5">Дизайнерские люстры</li>
             </ul>
         </div>
 
@@ -202,5 +223,6 @@
         <small>Все права защищены &copy; powered by Jaruzzix, 2026</small>
     </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>
