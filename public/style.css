@@ -302,7 +302,7 @@ nav {
 #main-pictures {
     position: relative;
     width: 100%;
-    transform: translateX(calc(-86.25%));
+    transform: translateX(calc(-86.25% - 89.44% * 3));
 
     /* transform: translateX(calc(-82.04%)); */
     display: flex;
@@ -414,6 +414,8 @@ nav {
     font-family: "Forum";
     font-size: 1.5rem;
     color: #3B2105;
+
+    cursor: pointer;
 }
 
 

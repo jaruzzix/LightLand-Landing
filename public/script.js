@@ -1,5 +1,5 @@
 const mainPictures = document.querySelector("#main-pictures");
-let pictureIndex = -1;
+let pictureIndex = 2;
 const scrollControls = document.querySelectorAll(".scrool");
 
 let slidingInterval;
@@ -34,27 +34,31 @@ function goToProducts() {
 //     control.addEventListener("click", () => {})
 // })
 
-function goToSlide(index) {
-    console.log(index)
-    mainPictures.style.transform = `translateX(-${86.25 + (89.44 * pictureIndex)}%)`;
-    if (index === 3) {
+function goToSlide(index, animate = true) {
+    if (!animate) {
         mainPictures.style.transition = "none";
-        mainPictures.style.transform = `translateX(-86.25%)`;
-        void mainPictures.offsetWidth;
-        mainPictures.style.transition = "transform 1000ms ease-in-out";
-        pictureIndex = 0;
     }
+    else {
+        mainPictures.style.transition = "transform 1000ms ease-in-out";
+    }
+
+    mainPictures.style.transform = `translateX(-${86.25 + (89.44 * pictureIndex)}%)`;
 }
 
 function startSliding() {
-    if (pictureIndex === 3) {
-        slidingInterval = setTimeout(startSliding, 0);
-    }
-    else {
-        slidingInterval = setTimeout(startSliding, 5000);
-    }
 
-    goToSlide(pictureIndex++);
+    goToSlide(++pictureIndex);
+
+    slidingInterval = setTimeout(() => {
+        if (pictureIndex === 3) {
+            pictureIndex = 0;
+            goToSlide(pictureIndex, false);
+            setTimeout(startSliding, 50);
+        } else {
+            startSliding();
+        }
+        
+    }, 6000);
 }
 
 function stopSliding() {
