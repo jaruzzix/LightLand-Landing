@@ -53,7 +53,7 @@
                     <h4 class="mp-note" id="mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
                     <button class="mp-button" id="mpb1" onclick="goToStore()">Каталог</button>
                 </div>
-                <div class="main-picture" id="mp2">
+                <div class="main-picture" id="mp2" @animationend="animationEnd">
                     <h1 class="mp-title" id="mpt2">Энергоэффективность и качество</h1>
                     <h3 class="mp-note" id="mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
                     <button class="mp-button" id="mpb2" onclick="goToProducts()">Узнать больше</button>
@@ -62,11 +62,11 @@
             
             <div id="underline"></div>
             <div id="scrool-menu">
-                <input type="radio" name="slide-pictures" value="2" class="scrool" id="s1" checked>
+                <input type="radio" name="slide-pictures" value="0" class="scrool" id="s1" checked>
                 <label for="s1"></label>
-                <input type="radio" name="slide-pictures" value="3" class="scrool" id="s2">
+                <input type="radio" name="slide-pictures" value="1" class="scrool" id="s2">
                 <label for="s2"></label>
-                <input type="radio" name="slide-pictures" value="5" class="scrool" id="s3">
+                <input type="radio" name="slide-pictures" value="2" class="scrool" id="s3">
                 <label for="s3"></label>
                 <!-- <div class="scrool" id="s1"></div>
                 <div class="scrool" id="s2"></div>

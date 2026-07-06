@@ -45,10 +45,13 @@ function goToSlide(index, animate = true) {
     mainPictures.style.transform = `translateX(-${86.25 + (89.44 * pictureIndex)}%)`;
 }
 
+
 function startSliding() {
 
     goToSlide(++pictureIndex);
+    scrollControls[pictureIndex % 3].checked = true;
 
+    
     slidingInterval = setTimeout(() => {
         if (pictureIndex === 3) {
             pictureIndex = 0;
@@ -64,5 +67,14 @@ function startSliding() {
 function stopSliding() {
     clearTimeout(slidingInterval);
 }
+
+scrollControls.forEach((control) => {
+    control.addEventListener('change', () => {
+        stopSliding();
+        pictureIndex = Number(control.getAttribute('value')) - 1;
+        startSliding();
+    })
+})
+
 
 startSliding();
