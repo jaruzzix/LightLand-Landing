@@ -9,10 +9,10 @@ function showMenu() {
         const isOpen = document.getElementById("nav").classList.toggle("show-menu");
 
         if (isOpen) {
-            document.body.style.position = "fixed";
+            document.body.style.overflow = "hidden";
         }
         else {
-            document.body.style.position = "";
+            document.body.style.overflow = "";
         }
     }
 }
