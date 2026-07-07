@@ -35,18 +35,14 @@ function goToProducts() {
 // })
 
 function goToSlide(index, animate = true) {
-
-    mainPictures.style.transition = "transform 1000ms ease-in-out";
-    mainPictures.style.transform = `translateX(-${86.25 + (89.44 * index)}%)`;
-
-    if (index === 3) {
-        setTimeout(() => {
-            pictureIndex = 0;
-            mainPictures.style.transition = "none";
-            mainPictures.style.transform = `translateX(-86.25%)`;
-        }, 1000);
+    if (!animate) {
+        mainPictures.style.transition = "none";
+    }
+    else {
+        mainPictures.style.transition = "transform 1000ms ease-in-out";
     }
     
+    mainPictures.style.transform = `translateX(-${86.25 + (89.44 * pictureIndex)}%)`;
 }
 
 
@@ -56,8 +52,16 @@ function startSliding() {
     scrollControls[pictureIndex % 3].checked = true;
 
     
-    slidingInterval = setTimeout(startSliding, 6000);
-}
+    slidingInterval = setTimeout(() => {
+        if (pictureIndex === 3) {
+            pictureIndex = 0;
+            goToSlide(pictureIndex, false);
+        }
+    }, 1000);
+    slidingInterval = setTimeout(startSliding, 6000);    
+} 
+    
+
 
 function stopSliding() {
     clearTimeout(slidingInterval);
