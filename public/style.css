@@ -159,7 +159,7 @@ main {
     display: none;
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    
+    z-index: 2;
 }
 
 header {
@@ -178,14 +178,13 @@ header {
     height: 26px;
     background-size: contain;
 
-    z-index: 3;
+    z-index: 2;
 }
 
 nav {
     width: 50%;
     min-width: 420px;
-
-    z-index: 2;
+    z-index: 1;
 }
 
 #main-nav {
@@ -193,8 +192,6 @@ nav {
     list-style: none;
     width: 100%;
     justify-content: space-between;
-
-    z-index: 2;
 }
 
 .main-item a{
@@ -231,49 +228,39 @@ nav {
 
 @media (max-width: 720px) {
     header {
-
+        
         width: 90%;
         max-width: 640px;
         justify-content: space-between;
+        z-index: 5;
 
     }
 
     nav {
-        height: 100vh;
-
+        transform: translateX(-100%);
         top: 0;
         left: 0;
-        padding-left: 5%;
-        transform: translateX(-100%);
-        transition: 1s;
-        position: absolute;
+        height: 100vh;
         width: 100%;
-        min-width: 180px;
-        background-color: #ebc9a4;
-        z-index: 2;
-    }
-
-    #main-nav {
-
-        margin-top: 80px;
-        height: 130px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        z-index: 2;
+        position: absolute;
+        background: #ebcba8;
+        transition: transform 1s;
     }
 
     nav.show-menu {
-        visibility: visible;
         transform: translateX(0);
-        display: block;
-        z-index: 1;
+    }
+
+    #main-nav {
+        margin-top: 80px;
+        margin-left: 5%;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 125px;
     }
 
     #nav-menu-btn {
         display: block;
-
-        z-index: 2;
     }
 }
 
@@ -314,11 +301,24 @@ nav {
 
 .main-picture {
     position: relative;
-    
+    flex-shrink: 0;
     margin-left: 60px;
     
     min-width: 1228px;
     height: 670px;
+}
+
+@media (min-width: 710px) and (max-width: 1440px) and (orientation: portrait) {
+    .main-picture {
+        
+        min-width: 720px;
+        height: 86vh;
+        width: 100%;
+    }
+
+    #main-pictures {
+        transform: translateX(calc(-100% - 120px));
+    }
 }
 
 

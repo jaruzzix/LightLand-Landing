@@ -1,19 +1,21 @@
 const mainPictures = document.querySelector("#main-pictures");
 let pictureIndex = 2;
 const scrollControls = document.querySelectorAll(".scrool");
-
+const nav = document.querySelector('nav');
+const menuButton = document.querySelector("#nav-menu-btn");
 let slidingInterval;
 
 function showMenu() {
     if (window.innerWidth <= 720){
-        const isOpen = document.getElementById("nav").classList.toggle("show-menu");
+        const isShowed = nav.classList.toggle("show-menu"); 
 
-        if (isOpen) {
+        if (isShowed) {
             document.body.style.overflow = "hidden";
         }
         else {
             document.body.style.overflow = "";
         }
+
     }
 }
 
@@ -76,4 +78,4 @@ scrollControls.forEach((control) => {
 })
 
 
-startSliding();
+// startSliding();
