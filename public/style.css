@@ -305,19 +305,45 @@ nav {
     flex-shrink: 0;
     margin-left: 60px;
     width: 85.28%;
+    height: 85vh;
     max-width: 1228px;
-    height: 670px;
+    max-height: 670px;
 }
 
+@media (orientation: portrait) {
+    #main {
+        max-width: 1240px;
+    }
+
+    .main-picture {
+        max-height: 1440px;
+    }
+
+    .main-picture {
+        max-width: 100%;
+    }
+
+    #main-pictures {
+        width: 115%;
+    }
+}
+
+@media (max-width: 1280px) and (orientation: landscape) {
+    #main-pictures {
+        width: 112%;
+    }
+}
 
 #mp1 {
     background: url("/public/images/main-picture1.webp") no-repeat;
     background-size: cover;
+    background-position: bottom;
 }
 
 #mp2 {
     background: url("/public/images/main-picture2.webp") no-repeat;
     background-size: cover;
+    background-position: left top;
 }
 
 #mp3 {
@@ -327,38 +353,39 @@ nav {
 
 .mp-title {
     position: relative;
-    top: 220px;
+    top: 28%;
     left: 60px;
     font-family: "Days One";
     color: #FB9600;
     text-transform: uppercase;
-    font-size: 24pt;
+    font-size: 2.6rem;
 
 }
 
-@media (min-width: 1600px) {
+/* @media (min-width: 1600px) {
     .mp-title {
     font-size: 28pt;
     }
-}
+} */
 
 #mpt1 {
-    width: 670px;
+    width: 800px;
 }
 
 #mpt2 {
-    width: 500px;
-    top: 170px;
+    width: 640px;
+    /* top: 170px; */
+    
 }
 
 #mpt3 {
-    width: 700px;
-    top: 170px;
+    width: 800px;
+    /* top: 170px; */
 }
 
 .mp-note {
     position: relative;
-    top: 240px;
+    top: 32%;
     left: 60px;
 
     font-family: "Ubuntu";
@@ -376,24 +403,24 @@ nav {
 
 #mpn2 {
     width: 500px;
-    top: 190px
+    /* top: 190px */
 }
 
 #mpn3 {
     width: 400px;
-    top: 190px
+    /* top: 190px */
 }
 
 .mp-button {
     position: absolute;
-    top: 420px;
+    top: 70%;
     left: 60px;
 
     border: none;
     background: #EEB338;
-    height: 44px;
-    padding: 0 50px;
-    border-radius: 20px;
+    height: 54px;
+    padding: 0 60px;
+    border-radius: 25px;
 
     font-family: "Forum";
     font-size: 1.5rem;
@@ -402,9 +429,9 @@ nav {
     cursor: pointer;
 }
 
-#mpb2, #mpb3 {
+/* #mpb2, #mpb3 {
     top: 370px;
-}
+} */
 
 
 #underline {
@@ -440,264 +467,344 @@ nav {
     background: #b5895a;
 }
 
-@media (min-width: 320px) and (max-width: 1200px) and (orientation: portrait) {
-    .main-picture {
-        
-        min-width: 320px;
-        height: 86vh;
-        width: 100%;
-    }
 
-    #main-pictures {
-        transform: translateX(calc(-100% * 1 - 120px - 60px * 0));
+@media (max-width: 860px) {
+    .mp-title, .mp-note, .mp-button {
+        left: 20px;
     }
 }
 
-@media (min-width: 320px) and (orientation: portrait) {
-    #mp1 {
-        background-position: left -100px top;
-    }
 
+/* адаптив для горизонтальной ориентации */
+
+@media (max-height: 640px) and (orientation: landscape) {
     #mp2 {
-        background-position: left -280px top;
+        background-position: left top 20%;
+    }
+    
+    .mp-title {
+        top: 26%;
+    }
+    
+    .mp-note {
+        top: 30%;
     }
 
-    #mp3 {
-        background-position: left -180px top;
+    .mp-button {
+        top: 70%;
+    }
+}
 
+@media (max-height: 480px) and (orientation: landscape) {
+
+    .mp-title {
+        top: 16%;
+    }
+    
+    .mp-note {
+        top: 20%;
+    }
+
+    .mp-button {
+        top: 70%;
+    }
+}
+
+@media (max-height: 380px) and (orientation: landscape) {
+    .mp-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+@media (max-width: 1400px) and (orientation: landscape) {
+    #mp2 {
+        background-size: 140%;
+    }
+}
+
+@media (max-width: 1080px) and (orientation: landscape) {
+    #mp2 {
+        background-size: 160%;
     }
 
     .mp-title {
-        left: 15px;
-        font-size: 1.6rem;
+        font-size: 2.2rem;
+    }
 
+    #mpt2 {
+        width: 570px
+    }
+}
+
+@media (max-width: 860px) and (orientation: landscape) {
+    .mp-title {
+        font-size: 1.6rem;
     }
 
     #mpt1 {
-        top: 140px;
+        width: 500px;
+    }
+
+    #mpt2 {
+        width: 400px;
+    }
+
+    #mpt3 {
+        width: 500px;
+    }
+
+    .mp-note {
+        font-size: 0.8rem;
+    }
+
+    #mpn1 {
+        width: 240px;
+    }
+}
+
+@media (max-width: 620px) and (orientation: landscape) {
+    .mp-title {
+        font-size: 1.4rem;
+    }
+
+    #mpt2 {
+        width: 360px;
+    }
+}
+
+
+/* адаптив для вертикальной ориентации */
+
+@media (min-width: 0) and (orientation: portrait) {
+    #mp1 {
+        background-position: bottom left;
+    }
+
+    #mp2 {
+        background-position: top left 35%;
+    }
+
+    #mp3 {
+        background-position: top left 40%;
+    }
+
+    .mp-title {
+        top: 15%;
+    }
+
+    .mp-note {
+        top: 18%;
+    }
+}
+
+@media (max-width: 400px) and (orientation: portrait) {
+
+    .mp-title {
+        font-size: 1.5rem;
+    }
+
+    #mpt1 {
         width: 290px;
     }
 
     #mpt2 {
         width: 200px;
-        top: 120px;
-        hyphens: manual;
-        
     }
 
     #mpt3 {
         width: 250px;
-        top: 150px;
-    }
-
-    .mp-note {
-        left: 15px;
-        font-size: 0.8rem;
-    }
-
-    #mpn1 {
-        top: 170px;
-        width: 240px;
-    }
-
-    #mpn2 {
-        width: 230px;
-        top: 140px
-    }
-
-    #mpn3 {
-        font-weight: 300;
-        width: 250px;
-        top: 170px
-    }
-
-    .mp-button {
-        top: 440px;
-        left: 15px;
-
-        
-        height: 44px;
-        padding: 0 60px;
-        border-radius: 20px;
-
-        font-family: "Forum";
-        font-size: 1.2rem;
-
-        cursor: pointer;
-    }
-
-    #mpb2, #mpb3{
-        top: 440px;
-        padding: 0 42px;
-    }
-}
-
-
-@media (min-width: 720px) and (orientation: portrait) {
-    #mp1 {
-        background-position: left -100px top;
-    }
-
-    #mp2 {
-        background-position: left -360px top;
-    }
-
-    #mp3 {
-        background-position: left -280px top;
-
-    }
-
-    .mp-title {
-        font-size: 3rem;
-        left: 60px;
-    }
-
-    #mpt1 {
-        width: 550px;
-    }
-
-    #mpt2 {
-        width: 400px;
-        top: 170px;
-        hyphens: manual;
-        
-    }
-
-    #mpt3 {
-        width: 700px;
-        top: 270px;
-    }
-
-    .mp-note {
-        font-size: 1.25rem;
-        left: 60px;
-    }
-
-    #mpn1 {
-        width: 380px;
-    }
-
-    #mpn2 {
-        width: 380px;
-        top: 190px
-    }
-
-    #mpn3 {
-        font-weight: 300;
-        width: 500px;
-        top: 290px
-    }
-
-    .mp-button {
-        top: 640px;
-        left: 60px;
-
-        
-        height: 70px;
-        padding: 0 100px;
-        border-radius: 32px;
-
-        font-family: "Forum";
-        font-size: 1.8rem;
-
-        cursor: pointer;
-    }
-
-    #mpb2{
-        top: 640px
-    }
-
-    #mpb3{
-        top: 640px
-    }
-}
-
-@media (min-width: 320px) and (max-width: 1200px) and (orientation: landscape) {
-    #main-pictures {
-        position: relative;
-        width: 110%;
-    }
-
-    .main-picture {
-        height: 80vh;
-    }
-
-    #mp1 {
-        background-position: bottom;
-    }
-
-    #mp2 {
-        background-position: left top;
-        background-size: 125%;
-    }
-
-    #mp3 {
-        background-size: 155%;
-        background-position: left -140px top -130px;
-    }
-
-    .mp-title {
-        font-size: 1.6rem;
-        left: 15px;
-    }
-
-    #mpt1 {
-        width: 550px;
-        top: 60px;
-    }
-
-    #mpt2 {
-        width: 400px;
-        top: 60px;
-        hyphens: manual;
-        
-    }
-
-    #mpt3 {
-        width: 700px;
-        top: 60px;
     }
 
     .mp-note {
         font-size: 0.7rem;
-        left: 15px
     }
 
     #mpn1 {
-        width: 250px;
-        top: 80px;
+        width: 200px;
+    }
+
+    #mpn2 {
+        width: 200px;
+    }
+
+    #mpn3 {
+        width: 200px;
+    }
+
+    #mpb2 {
+        padding: 0 40px;
+    }
+
+    #mpb3 {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 400px) and (orientation: portrait) {
+
+    .mp-title {
+        font-size: 2rem;
+    }
+    
+    #mpt1 {
+        width: 350px;
+    }
+
+    #mpt2 {
+        width: 300px;
+    }
+
+    #mpt3 {
+        width: 320px;
+    }
+
+    .mp-note {
+        font-size: 0.8rem;
+    }
+
+    #mpn1 {
+        width: 240px;
     }
 
     #mpn2 {
         width: 240px;
-        top: 80px
     }
 
     #mpn3 {
-        width: 250px;
-        top: 80px
+        width: 240px;
+    }
+}
+
+@media (min-width: 500px) and (orientation: portrait) {
+
+    .mp-title, .mp-note, .mp-button {
+        left: 40px;
+    }
+
+    .mp-title {
+        font-size: 2.3rem;
+    }
+
+    #mpt1 {
+        width: 450px;
+    }
+
+    #mpt3 {
+        width: 380px;
+    }
+
+    .mp-note {
+        font-size: 0.9rem;
+    }
+
+    #mpn2 {
+        width: 280px;
     }
 
     .mp-button {
-        top: 200px;
-        left: 15px;
+        height: 64px;
+        border-radius: 30px;
+        padding: 0 80px;
+        font-size: 1.65rem;
+    }
+}
 
-        
-        height: 36px;
-        padding: 0 60px;
-        border-radius: 16px;
+@media (min-width: 650px) and (max-height: 1200px) and (orientation: portrait) {
+    #mp2 {
+        background-size: 320%;
+        background-position: top left 30%;
+    }
+}
 
-        font-family: "Forum";
-        font-size: 1rem;
+@media (min-width: 650px) and (orientation: portrait) {
 
-        cursor: pointer;
+    .mp-title, .mp-note, .mp-button {
+        left: 60px;
     }
 
-    #mpb2{
-        top: 200px
+    .mp-title {
+        font-size: 3rem;
     }
 
-    #mpb3{
-        top: 200px
+    #mpt1 {
+        width: 550px;
+    }
+
+    #mpt2 {
+        width: 400px;
+    }
+
+    #mpt3 {
+        width: 500px;
+    }
+
+    .mp-note {
+        font-size: 1.1rem;
+    }
+
+    #mpn1 {
+        width: 450px;
+    }
+
+    #mpn3 {
+        width: 450px;
+    }
+
+    #mpn2 {
+        width: 350px;
+    }
+}
+
+@media (min-width: 800px) and (orientation: portrait) {
+    #mp2 {
+        background-position: top left 30%;
+    }
+
+    .mp-title, .mp-note, .mp-button {
+        left: 60px;
+    }
+
+    .mp-title {
+        top: 18%;
+        font-size: 4rem;
+    }
+
+    #mpt1 {
+        width: 700px;
+    }
+
+    #mpt2 {
+        width: 600px;
+    }
+
+    #mpt3 {
+        width: 650px;
+    }
+
+    .mp-note {
+        top: 21%;
+        font-size: 1.5rem;
+    }
+
+    #mpn1 {
+        width: 450px;
+    }
+
+    #mpn2 {
+        width: 600px;
+    }
+
+    #mpn3 {
+        width: 600px;
+    }
+
+    .mp-button {
+        height: 84px;
+        border-radius: 40px;
+        padding: 0 120px;
+        font-size: 2.2rem;
     }
 }

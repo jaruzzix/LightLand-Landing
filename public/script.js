@@ -53,12 +53,8 @@ function getOrientation() {
 }
 
 function goToSlide(index, animate = true) {
-    if (document.body.offsetWidth < 1200 && getOrientation() == "portrait") {
-        transformValue = `calc(-${100 * index}% - ${60 * (index + 1)}px)`;
-    }
-    else {
-        transformValue = `calc(-77.91% - 120px  - (85.27% + 60px) * ${index})`;
-    }
+
+    transformValue = `calc(-77.91% - 120px  - (85.27% + 60px) * ${index})`;
 
     if (!animate) {
         mainPictures.style.transition = "none";
@@ -74,19 +70,8 @@ function goToSlide(index, animate = true) {
 function startSliding() {
 
     goToSlide(++pictureIndex);
-    if (document.body.offsetWidth < 1200 && getOrientation() == "portrait") {
-        scrollControls[pictureIndex % 4 === 0? 0 : pictureIndex - 1].checked = true;
 
-        slidingInterval = setTimeout(() => {
-            if (pictureIndex === 4) {
-                pictureIndex = 1;
-                goToSlide(pictureIndex, false);
-            }
-        }, 1000);
-        slidingInterval = setTimeout(startSliding, 6000);  
-    }
-    else {
-        scrollControls[pictureIndex % 3].checked = true;
+    scrollControls[pictureIndex % 3].checked = true;
 
         slidingInterval = setTimeout(() => {
             if (pictureIndex === 3) {
@@ -95,7 +80,6 @@ function startSliding() {
             }
         }, 1000);
         slidingInterval = setTimeout(startSliding, 6000); 
-    }  
 } 
     
 
@@ -107,17 +91,12 @@ function stopSliding() {
 scrollControls.forEach((control) => {
     control.addEventListener('change', () => {
         stopSliding();
-        if (document.body.offsetWidth < 1200 && getOrientation() == "portrait") {
-            pictureIndex = Number(control.getAttribute('value'));
-        }
-        else {
-            pictureIndex = Number(control.getAttribute('value')) - 1;
-        }
-        
+
+        pictureIndex = Number(control.getAttribute('value')) - 1;
         startSliding();
     })
 })
 
 
-startSliding();
-// goToSlide(2);
+// startSliding();
+goToSlide(2);
