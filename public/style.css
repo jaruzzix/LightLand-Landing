@@ -287,8 +287,9 @@ nav {
 #main-pictures {
     position: relative;
     width: 100%;
-    transform: translateX(calc(-86.25% - 89.44% * 3));
-
+    /* transform: translateX(calc(-86.25% - 89.44% * 0)); */
+    /* transform: translateX(calc(-82.08% - 60px - (85.27% + 60px) * 0)); */
+    transform: translateX(calc(-77.91% - 120px  - (85.27% + 60px) * 0));
     /* transform: translateX(calc(-82.04%)); */
     display: flex;
     transition: transform 1000ms ease-in-out;
@@ -303,22 +304,9 @@ nav {
     position: relative;
     flex-shrink: 0;
     margin-left: 60px;
-    
-    min-width: 1228px;
+    width: 85.28%;
+    max-width: 1228px;
     height: 670px;
-}
-
-@media (min-width: 710px) and (max-width: 1440px) and (orientation: portrait) {
-    .main-picture {
-        
-        min-width: 720px;
-        height: 86vh;
-        width: 100%;
-    }
-
-    #main-pictures {
-        transform: translateX(calc(-100% - 120px));
-    }
 }
 
 
@@ -335,7 +323,6 @@ nav {
 #mp3 {
     background: url("/public/images/main-picture3.webp") no-repeat;
     background-size: cover;
-
 }
 
 .mp-title {
@@ -375,7 +362,7 @@ nav {
     left: 60px;
 
     font-family: "Ubuntu";
-    color: #E3DFDA;
+    color: #ffffff;
     font-weight: 350;
 
     text-transform: uppercase;
@@ -398,8 +385,8 @@ nav {
 }
 
 .mp-button {
-    position: relative;
-    top: 320px;
+    position: absolute;
+    top: 420px;
     left: 60px;
 
     border: none;
@@ -413,6 +400,10 @@ nav {
     color: #3B2105;
 
     cursor: pointer;
+}
+
+#mpb2, #mpb3 {
+    top: 370px;
 }
 
 
@@ -447,4 +438,266 @@ nav {
 
 #scrool-menu label:hover {
     background: #b5895a;
-} 
+}
+
+@media (min-width: 320px) and (max-width: 1200px) and (orientation: portrait) {
+    .main-picture {
+        
+        min-width: 320px;
+        height: 86vh;
+        width: 100%;
+    }
+
+    #main-pictures {
+        transform: translateX(calc(-100% * 1 - 120px - 60px * 0));
+    }
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+    #mp1 {
+        background-position: left -100px top;
+    }
+
+    #mp2 {
+        background-position: left -280px top;
+    }
+
+    #mp3 {
+        background-position: left -180px top;
+
+    }
+
+    .mp-title {
+        left: 15px;
+        font-size: 1.6rem;
+
+    }
+
+    #mpt1 {
+        top: 140px;
+        width: 290px;
+    }
+
+    #mpt2 {
+        width: 200px;
+        top: 120px;
+        hyphens: manual;
+        
+    }
+
+    #mpt3 {
+        width: 250px;
+        top: 150px;
+    }
+
+    .mp-note {
+        left: 15px;
+        font-size: 0.8rem;
+    }
+
+    #mpn1 {
+        top: 170px;
+        width: 240px;
+    }
+
+    #mpn2 {
+        width: 230px;
+        top: 140px
+    }
+
+    #mpn3 {
+        font-weight: 300;
+        width: 250px;
+        top: 170px
+    }
+
+    .mp-button {
+        top: 440px;
+        left: 15px;
+
+        
+        height: 44px;
+        padding: 0 60px;
+        border-radius: 20px;
+
+        font-family: "Forum";
+        font-size: 1.2rem;
+
+        cursor: pointer;
+    }
+
+    #mpb2, #mpb3{
+        top: 440px;
+        padding: 0 42px;
+    }
+}
+
+
+@media (min-width: 720px) and (orientation: portrait) {
+    #mp1 {
+        background-position: left -100px top;
+    }
+
+    #mp2 {
+        background-position: left -360px top;
+    }
+
+    #mp3 {
+        background-position: left -280px top;
+
+    }
+
+    .mp-title {
+        font-size: 3rem;
+        left: 60px;
+    }
+
+    #mpt1 {
+        width: 550px;
+    }
+
+    #mpt2 {
+        width: 400px;
+        top: 170px;
+        hyphens: manual;
+        
+    }
+
+    #mpt3 {
+        width: 700px;
+        top: 270px;
+    }
+
+    .mp-note {
+        font-size: 1.25rem;
+        left: 60px;
+    }
+
+    #mpn1 {
+        width: 380px;
+    }
+
+    #mpn2 {
+        width: 380px;
+        top: 190px
+    }
+
+    #mpn3 {
+        font-weight: 300;
+        width: 500px;
+        top: 290px
+    }
+
+    .mp-button {
+        top: 640px;
+        left: 60px;
+
+        
+        height: 70px;
+        padding: 0 100px;
+        border-radius: 32px;
+
+        font-family: "Forum";
+        font-size: 1.8rem;
+
+        cursor: pointer;
+    }
+
+    #mpb2{
+        top: 640px
+    }
+
+    #mpb3{
+        top: 640px
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1200px) and (orientation: landscape) {
+    #main-pictures {
+        position: relative;
+        width: 110%;
+    }
+
+    .main-picture {
+        height: 80vh;
+    }
+
+    #mp1 {
+        background-position: bottom;
+    }
+
+    #mp2 {
+        background-position: left top;
+        background-size: 125%;
+    }
+
+    #mp3 {
+        background-size: 155%;
+        background-position: left -140px top -130px;
+    }
+
+    .mp-title {
+        font-size: 1.6rem;
+        left: 15px;
+    }
+
+    #mpt1 {
+        width: 550px;
+        top: 60px;
+    }
+
+    #mpt2 {
+        width: 400px;
+        top: 60px;
+        hyphens: manual;
+        
+    }
+
+    #mpt3 {
+        width: 700px;
+        top: 60px;
+    }
+
+    .mp-note {
+        font-size: 0.7rem;
+        left: 15px
+    }
+
+    #mpn1 {
+        width: 250px;
+        top: 80px;
+    }
+
+    #mpn2 {
+        width: 240px;
+        top: 80px
+    }
+
+    #mpn3 {
+        width: 250px;
+        top: 80px
+    }
+
+    .mp-button {
+        top: 200px;
+        left: 15px;
+
+        
+        height: 36px;
+        padding: 0 60px;
+        border-radius: 16px;
+
+        font-family: "Forum";
+        font-size: 1rem;
+
+        cursor: pointer;
+    }
+
+    #mpb2{
+        top: 200px
+    }
+
+    #mpb3{
+        top: 200px
+    }
+}
