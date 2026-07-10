@@ -814,21 +814,68 @@ nav {
 
 .heading {
     position: relative;
-    left: 10%;
+    left: 60px;
     top:0;
     font-size: 3rem;
     font-family: "Days One";
     color: #3B2105;
 }
 
-/* О нас */
+@media (max-width: 840px) and (orientation: portrait) {
+    .heading {
+        font-size: 2.4rem;;
+        left: 40px;
+    }
+}
 
-#about {
-    margin-top: 80px;
+@media (max-width: 620px) and (orientation: portrait) {
+    .heading {
+        font-size: 2.3rem;;
+    }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+    .heading {
+        font-size: 2.1rem;;
+    }
+}
+
+@media (max-width: 380px) and (orientation: portrait) {
+    .heading {
+        font-size: 1.6rem;;
+    }
+}
+
+@media (max-width: 750px) {
+    .heading {
+        font-size: 2.4rem;;
+        left: 2.5%;
+    }
+}
+
+
+/* Контейнеры */
+
+.container {
+    margin-bottom: 80px;
     position: relative;
     width: 100%;
     max-width: 1440px;
 }
+
+@media (max-width: 720px) {
+    .container {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-bottom: 40px;
+    }
+}
+
+/* О нас */
 
 .content {
     margin-top: 20px;
@@ -839,16 +886,12 @@ nav {
 }
 
 .content-box {
+    position: relative;
     width: 630px;
     height: 230px;
     border: 4px solid #3B2105;
     border-radius: 10px;
     box-shadow: -2px 5px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.content-text {
-    font-family: "Cormorant Unicase";
-    color: #3B2105;
 }
 
 #about-picture1 {
@@ -876,21 +919,198 @@ nav {
 }
 
 .content-text {
+    font-family: "Cormorant Unicase";
+    color: #3B2105;
+
     position: absolute;
     font-size: 1.5rem;
 }
 
 #text1 {
-    transform: translate(-110%, 60%);
-    width: 400px;
+    top: 25%;
+    left: -70%;
+    width: 65%;
 }
 
 #text2 {
-    transform: translate(135%, 140%);
-    width: 500px;
+    top: 35%;
+    left: 107%;
+    width: 60%;
 }
 
 #text3 {
-    transform: translate(-108%, 160%);
-    width: 400px;
+    top: 40%;
+    left: -70%;
+    width: 55%;
 }
+
+@media (max-width: 1300px) {
+    
+    .content-box {
+        width: 48.46%;
+        min-width: 431px;
+    }
+
+    #about-picture1 {
+        transform: translate(30%, 12%);
+    }
+
+    #about-picture2 {
+        transform: translateX(-40%);
+    }
+
+    #about-picture3 {
+        transform: translate(40%, -10%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .content-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 840px) {
+
+    .content-text {
+        font-size: 1.2rem;
+    }
+
+    #about-picture1 {
+        left: calc((100% - 438px) / 2 - 30px);
+        transform: translate(0, 12%);
+    }
+
+    #about-picture2 {
+        left: calc((-100% + 438px) / 2 + 30px);
+        transform: translateX(0);
+    }
+
+    #about-picture3 {
+        left: calc((100% - 438px) / 2 - 90px);
+        transform: translate(0, -10%);
+    }
+
+    #text1 {
+        top: 25%;
+        left: -52%;
+        width: 50%;
+    }
+
+    #text2 {
+        top: 35%;
+        left: 107%;
+        width: 50%;
+    }
+
+    #text3 {
+        top: 40%;
+        left: -45%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    #about-picture1, #about-picture2, #about-picture3 {
+        margin-bottom: 10px;
+        left: 0;
+        transform: translate(0);
+
+
+        box-shadow: none;
+        border: none;
+
+        width: 95%;
+        min-width: 0;
+        z-index: 1;
+    }
+
+    #about-picture3 {
+        background-position: top -100px center;
+    }
+
+    .content-box::before {
+        position: absolute;
+        content: "";
+        width: 99.7%;
+        height: 99%;
+        border: 2px solid #3B2105;
+        border-radius: 10px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
+        opacity: 0.65;
+        z-index: 2;
+    }
+
+    .content-text {
+        position: relative;
+        color: #FB9600;
+        z-index: 3;
+        left: 20px;
+    }
+
+    #text1, #text2, #text3 {
+        top: 70%;
+        left: 20px;
+    }
+
+    #text1 {
+        width: 400px;
+    }
+
+    #text2 {
+        width: 400px;
+    }
+
+    #text3 {
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 540px) {
+    #about-picture1, #about-picture2, #about-picture3 {
+        height: 200px;
+        background-size: cover;
+        background-position: top left;
+    }
+
+    .content-text {
+        font-size: 1rem;
+
+    }
+
+    #text1 {
+        width: 300px;
+    }
+
+    #text2 {
+        width: 340px;
+    }
+
+    #text3 {
+        width: 220px;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 410px) {
+
+    #about-picture2 {
+        background-position: top -20px left;
+    }
+
+    #about-picture3 {
+        background-position: top -40px left;
+    }
+}
+
+@media (max-width: 450px) {
+    #about-picture1, #about-picture2, #about-picture3 {
+        height: 136px;
+    }
+
+    .content-text {
+        font-size: 0.8rem;
+
+    }
+}
+
