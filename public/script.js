@@ -98,5 +98,6 @@ scrollControls.forEach((control) => {
 })
 
 
-// startSliding();
-goToSlide(2);
+
+startSliding();
+// goToSlide(2);

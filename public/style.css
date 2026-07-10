@@ -808,3 +808,89 @@ nav {
         font-size: 2.2rem;
     }
 }
+
+
+/* Стили для заголовков */
+
+.heading {
+    position: relative;
+    left: 10%;
+    top:0;
+    font-size: 3rem;
+    font-family: "Days One";
+    color: #3B2105;
+}
+
+/* О нас */
+
+#about {
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.content {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-box {
+    width: 630px;
+    height: 230px;
+    border: 4px solid #3B2105;
+    border-radius: 10px;
+    box-shadow: -2px 5px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.content-text {
+    font-family: "Cormorant Unicase";
+    color: #3B2105;
+}
+
+#about-picture1 {
+    background: url("/public/images/about-picture1.webp") no-repeat;
+    background-size: 120%;
+    background-position: top -40px center;
+    z-index: 2;
+    transform: translate(35%, 12%);
+}
+
+#about-picture2 {
+    background: url("/public/images/about-picture2.webp") no-repeat;
+    background-size: 120%;
+    background-position: top -40px center;
+    z-index: 1;
+    transform: translateX(-45%);
+}
+
+#about-picture3 {
+    background: url("/public/images/about-picture3.webp") no-repeat;
+    background-size: 120%;
+    background-position: top -40px center;
+    z-index: 2;
+    transform: translate(45%, -10%);
+}
+
+.content-text {
+    position: absolute;
+    font-size: 1.5rem;
+}
+
+#text1 {
+    transform: translate(-110%, 60%);
+    width: 400px;
+}
+
+#text2 {
+    transform: translate(135%, 140%);
+    width: 500px;
+}
+
+#text3 {
+    transform: translate(-108%, 160%);
+    width: 400px;
+}
