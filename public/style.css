@@ -1114,3 +1114,124 @@ nav {
     }
 }
 
+
+/* Products */
+
+#products-title {
+    width: 600px;
+    line-height: 100%;
+}
+
+#products {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+}
+
+#prodicts-pictures {
+    position: relative;
+    display: flex;
+    width: calc(100% - 120px);
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 20px;
+    left: 60px;
+}
+
+.product-box {
+    overflow: hidden;
+    position: relative;
+    transition: width 800ms ease;
+    width: 17%;
+    height: 586px;
+    z-index: 1;
+}
+
+.product-box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    transform: translateY(-100%);
+    transition: transform 800ms ease-out;
+
+    background: linear-gradient(to top, #ffffff00 50%, #000000 85%);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.product-box.prod::before {
+    content: "";
+    transform: translateY(0);
+}
+
+.product-box::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 7px);
+    height: calc(100% - 7px);
+    border: 4px solid #3B2105;
+    
+    z-index: 3;
+}
+
+
+
+.product-title {
+    position: absolute;
+    width: 50%;
+    top: -100%;
+    left: 3%;
+    transition: top 800ms ease-out;
+
+    color: #F7F2EC;
+    font-family: "Days One";
+    font-size: 2.2rem;
+    z-index: 3;
+}
+
+.product-title.prod {
+        top: 3%;
+}
+
+@media (hover: hover) {
+    .product-box:hover::before {
+        transform: translateY(0);
+    }
+
+    .product-box:hover .product-title, .product-title.prod {
+        top: 3%;
+    }
+}
+
+/* .product-box:hover {
+    width: 40%;
+} */
+
+#prod-pic1 {
+    background: url("/public/images/prod-picture1.webp") no-repeat;
+    background-size: cover;
+}
+
+#prod-pic2 {
+    background: url("/public/images/prod-picture2.webp") no-repeat;
+    background-size: cover;
+}
+
+#prod-pic3 {
+    background: url("/public/images/prod-picture3.webp") no-repeat;
+    background-size: cover;
+    background-position: top left -240px;
+}
+
+#prod-pic4 {
+    background: url("/public/images/prod-picture4.webp") no-repeat;
+    background-size: cover;
+}
+
+#prod-pic5 {
+    background: url("/public/images/prod-picture5.webp") no-repeat;
+    background-size: cover;
+    background-position: top left -140px;
+}
