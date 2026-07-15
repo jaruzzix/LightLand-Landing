@@ -1117,7 +1117,7 @@ nav {
 }
 
 
-/* Products */
+/* Товары */
 
 #products-title {
     width: 60%;
@@ -1323,3 +1323,161 @@ nav {
 }
 
 
+/* Услуги */
+
+
+
+#services-info {
+    margin-top: 20px;
+    position: relative;
+    width: calc(100% - 120px);
+    left: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#services-container {
+    display: flex;
+    position: relative;
+    width: 68%;
+}
+
+#services-list {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 262px);
+    grid-auto-rows: 244px;
+    gap: 6px
+}
+
+.service-box {
+    background: #EAD5BF;
+    border: 2px solid #3B2105;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sb-title {
+    position: relative;
+    font-family: "Cormorant Unicase";
+    color: #3B2105;
+    line-height: 90%;
+    left: 5%;
+
+}
+
+.sb-description {
+    list-style: none;
+    
+    position: relative;
+    left: 8%;
+    width: 88%;
+    line-height: 140%;
+    color: #592E00;
+    font-family: "Forum";
+}
+
+.sb-content {
+    display: flex;
+    align-items: top;
+    line-height: 90%;
+    margin-bottom: 10px;
+}
+
+.sb-content::before {
+    position: relative;
+    transform: translateY(325%);
+    content: "";
+    width: 2px;
+    height: 2px;
+    background: #592E00;
+    margin-right: 5%;
+}
+
+.cost-box {
+    position: relative;
+    left: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6DFC8;
+    border: 1px solid #DBB993;
+    width: 48%;
+    height: 40px;
+    border-radius: 20px;
+    font-family: "Cormorant Unicase";
+    font-weight: 600;
+    
+    color: #3B2105;
+}
+
+.cost {
+    font-family: "David Libre";
+    font-weight: 400;
+}
+
+#services-list .service-box:first-child {
+    background: #D1B79B;
+}
+
+#services-note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 33%;
+    
+    border: 2px solid #3B2105;
+    border-radius: 20px;
+}
+
+#sn-title {
+    position: relative;
+    left: 5%;
+    top: 2%;
+    width: 80%;
+    font-family: "Days One";
+    font-size: 1.5rem;
+}
+
+#sn-list {
+    color: #975E20;
+    font-family: "Days One";
+
+    position: relative;
+    width: 83%;
+    left: 11%;
+    font-size: 0.9rem;
+}
+
+.sn-list-item {
+    margin-bottom: 17px;
+}
+
+#sn-button {
+    position: relative;
+    top: -5.5%;
+    left: 40%;
+
+    background: #3B2105;
+    border: 2px solid #412609;
+    transition: background 300ms ease;
+    color: #D4AE87;
+    font-family: "Cormorant Unicase";
+    font-weight: 700;
+    height: 40px;
+    width: 48%;
+    border-radius: 10px;
+
+}
+
+@media (hover: hover) {
+    #sn-button:hover {
+        background: #573613;
+    }
+}
