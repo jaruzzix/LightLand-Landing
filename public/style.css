@@ -1354,20 +1354,23 @@ nav {
 }
 
 .service-box {
+    position: relative;
     background: #EAD5BF;
     border: 2px solid #3B2105;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .sb-title {
-    position: relative;
+    position: absolute;
     font-family: "Cormorant Unicase";
     color: #3B2105;
     line-height: 90%;
     left: 5%;
+    top: 5%;
+    width: 85%;
 
 }
 
@@ -1400,8 +1403,9 @@ nav {
 }
 
 .cost-box {
-    position: relative;
+    position: absolute;
     left: 7%;
+    bottom: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1430,7 +1434,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: 33%;
+    width: 30%;
     
     border: 2px solid #3B2105;
     border-radius: 20px;
@@ -1440,7 +1444,7 @@ nav {
     position: relative;
     left: 5%;
     top: 2%;
-    width: 80%;
+    width: 90%;
     font-family: "Days One";
     font-size: 1.5rem;
 }
@@ -1461,7 +1465,7 @@ nav {
 
 #sn-button {
     position: relative;
-    top: -5.5%;
+    top: -4%;
     left: 40%;
 
     background: #3B2105;
@@ -1479,5 +1483,171 @@ nav {
 @media (hover: hover) {
     #sn-button:hover {
         background: #573613;
+    }
+}
+
+@media (min-width: 1380px) {
+    #services-note {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1293px) {
+    #services-note {
+        width: 55%;
+    }
+
+    #sn-title {
+        position: relative;
+        left: 5%;
+        top: 2%;
+        width: 80%;
+        font-size: 1.9rem;
+    }
+
+    #sn-list {
+        width: 70%;
+        left: 11%;
+        font-size: 1.1rem;
+    }
+
+    .sn-list-item {
+        margin-bottom: 30px;
+    }
+
+    #sn-button {
+        top: -4%;
+        left: 40%;
+
+        height: 60px;
+        width: 48%;
+        border-radius: 15px;
+
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1160px) {
+    #services-note {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1060px) {
+    #services-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    #services-info {
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+    }
+
+
+    #services-list {
+        width: calc(250% + 30px);
+        left: 30px;
+        display: flex;
+    }
+
+    #services-list:last-child {
+        margin-right: 30px;
+    }
+
+    .service-box {
+        width: 262px;
+        flex-shrink: 0;
+        height: 244px;
+    }
+
+    #services-note {
+        margin-top: 34px;
+        left: 30px;
+        width: calc(90% - 60px);
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    #sn-title {
+        width: auto;
+        margin: 20px 0 60px;
+        left: 0;
+    }
+
+    #sn-list {
+        width: 100%;
+        left: 0;
+        display: grid;
+        column-gap: 80px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+
+    #sn-button {
+        top: -4%;
+        left: 0;
+        margin: 60px 0 20px;
+
+        height: 60px;
+        width: 43%;
+        border-radius: 15px;
+
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 820px) {
+    #sn-list {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+    #sn-button {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    #sn-button {
+        position: relative;
+        width: 80%;
+    }
+
+    #sn-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+
+    #services-note {
+        width: calc(84%);
+        left: 3%;
+    }
+
+    #sn-button {
+        position: relative;
+        width: 80%;
+        height: 50px;
+    }
+
+    #sn-title {
+        margin: 15px 0 20px;
+        font-size: 1.4rem;
+    }
+
+    #sn-list {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .sn-list-item {
+        margin-bottom: 16px;
+    }
+
+    #sn-button {
+        margin: 20px 0 15px;
     }
 }
