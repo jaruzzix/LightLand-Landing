@@ -135,25 +135,31 @@ function removeProd(index) {
 
 let firstProdAnim = true;
 function startProductAnimation() {
-    products[productIndex].style.width = '45%';
-    addProd(productIndex);
+    if (document.body.offsetWidth >= 760) {
+        products[productIndex].style.width = '45%';
+        addProd(productIndex);
 
-    if (!firstProdAnim) {
-        removeProd(productIndex - 1);
+        if (!firstProdAnim) {
+            removeProd(productIndex - 1);
+        }
+        else {
+            firstProdAnim = false;
+        }
+
+        changeProductSize(productIndex++);
+
+        if (productIndex === 5) {
+            productIndex = 0;
+        }
+
+        changeProductSizeTimeout = setTimeout(startProductAnimation, 2800);
     }
-    else {
-        firstProdAnim = false;
-    }
+    // else {
+        
 
-    changeProductSize(productIndex++);
-
-    if (productIndex === 5) {
-        productIndex = 0;
-    }
-
-    changeProductSizeTimeout = setTimeout(startProductAnimation, 2800);
+    // }
 }
-
+    
 function stopProductAnimation() {
     clearTimeout(changeProductSizeTimeout);
 }

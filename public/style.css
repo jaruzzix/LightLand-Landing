@@ -828,6 +828,13 @@ nav {
     }
 }
 
+@media (max-width: 750px) {
+    .heading {
+        font-size: 2.4rem;;
+        left: 2.5%;
+    }
+}
+
 @media (max-width: 620px) and (orientation: portrait) {
     .heading {
         font-size: 2.3rem;;
@@ -836,22 +843,17 @@ nav {
 
 @media (max-width: 480px) and (orientation: portrait) {
     .heading {
-        font-size: 2.1rem;;
+        font-size: 1.9rem;;
     }
 }
 
 @media (max-width: 380px) and (orientation: portrait) {
     .heading {
-        font-size: 1.6rem;;
+        font-size: 1.7rem;;
     }
 }
 
-@media (max-width: 750px) {
-    .heading {
-        font-size: 2.4rem;;
-        left: 2.5%;
-    }
-}
+
 
 
 /* Контейнеры */
@@ -1118,7 +1120,7 @@ nav {
 /* Products */
 
 #products-title {
-    width: 600px;
+    width: 60%;
     line-height: 100%;
 }
 
@@ -1235,3 +1237,89 @@ nav {
     background-size: cover;
     background-position: top left -140px;
 }
+
+@media (max-width: 1140px) {
+    .product-box {
+        height: 450px;
+    }
+
+    .product-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 870px) {
+
+    .product-title {
+        font-size: 1.6rem;
+    }
+
+    #products-title {
+        width: 80%;
+    }
+}
+
+
+
+@media (max-width: 760px) {
+    .product-box {
+        width: 400px;
+        height: 600px;
+    }
+
+    .product-box:last-child {
+        margin-right: 30px;
+    }
+
+    #prodicts-pictures {
+        left: 30px;
+        width: 2100px;
+    }
+
+    #pictures-cintainer {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .product-box::before {
+        transform: translateY(0);
+    }
+
+    .product-title {
+        top: 3%;
+    }
+}
+
+@media (max-width: 580px) {
+    .product-box {
+        width: 270px;
+        height: 400px;
+    }
+
+    #prodicts-pictures {
+        left: 30px;
+        width: 1450px;
+    }
+
+    .product-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .product-box {
+        width: 210px;
+        height: 290px;
+    }
+
+    #prodicts-pictures {
+        left: 18px;
+        width: 1120px;
+    }
+
+    .product-box:last-child {
+        margin-right: 18px;
+    }
+}
+
+
