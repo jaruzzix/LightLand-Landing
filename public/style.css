@@ -1477,7 +1477,7 @@ nav {
     height: 40px;
     width: 48%;
     border-radius: 10px;
-
+    cursor: pointer;
 }
 
 @media (hover: hover) {
@@ -1652,6 +1652,7 @@ nav {
 
     #sn-button {
         margin: 20px 0 15px;
+
     }
 
     #services-list {
@@ -1739,7 +1740,7 @@ nav {
     position: relative;
     margin: 20px 8%;
     font-family: "Days One";
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #3B2105
 }
 
@@ -1779,12 +1780,15 @@ nav {
     padding: 10px 14.5%;
 
     background: #3F3224;
+    transition: background 300ms;
     border: none;
     border-radius: 5px;
 
     color: #EED3B6;
     font-family: "Forum";
     font-size: 1rem;
+
+    cursor: pointer;
 }
 
 #email {
@@ -1903,6 +1907,7 @@ nav {
     bottom: 10%;
 
     background: #623403;
+    transition: background 300ms;
 
     font-family: "Cormorant Unicase";
     font-size: 1.2rem;
@@ -1911,6 +1916,229 @@ nav {
     width: 44%;
     height: 60px;
     border-radius: 5px;
+    border: none;
     left: 28%;
+
+    cursor: pointer;
 }
 
+@media (hover: hover) {
+    .messagers-button:hover {
+        background-color: #5C4A36;
+    }
+
+    #wb-button:hover {
+        background: #78450f;
+    }
+}
+
+@media (max-width: 1280px) {
+    #wb-button {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1175px) {
+    #wb-title {
+        font-size: 2.1rem;
+    }
+
+    #wb-votes {
+        font-size: 1.2rem;
+    }
+
+    #wb-votes .wb-vote:first-child {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1162px) {
+    #wb-votes .wb-vote:nth-child(2) {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1070px) {
+    #wb-title {
+        font-size: 1.8rem;
+    }
+
+    #wb-votes {
+        font-size: 1.1rem;
+    }
+
+    #wb-button {
+        height: 52px;
+        width: 80%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 1060px) {
+    #contacts-container {
+        width: calc(100% - 60px);
+        left: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #wb-title {
+        margin: 5%;
+        font-size: 1.5rem;
+    }
+
+    #wb-votes {
+        font-size: 1.05rem;
+        width: 85%;
+    }
+
+    #wb-button {
+        height: 52px;
+        bottom: 30px;
+    }
+
+    #contacts-container {
+        column-gap: 3%;
+    }
+}
+
+@media (max-width: 840px) {
+    #contacts-container {
+        column-gap: 12px;
+        row-gap: 12px;
+        
+        grid-template-columns: 360px 1fr;
+        grid-template-rows: 248px 460px;
+        grid-template-areas: "a b"
+                            "c c";
+    }
+
+    #wb-title {
+        width: 70%;
+    }
+
+    #wb-votes .wb-vote:first-child {
+        width: 64%;
+    }
+}
+
+@media (max-width: 620px) {
+    #contacts-container {
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+
+    #contacts-container {
+        column-gap: 12px;
+        row-gap: 12px;
+        
+        grid-template-columns: 1fr;
+        grid-template-rows: 248px auto 460px;
+
+        grid-template-areas: "a"
+                             "b"
+                             "c";
+    }
+
+    #messagers-buttons {
+        justify-content: center;
+    }
+
+    .messagers-button {
+        padding: 14px 16%;
+        margin: 0 5px;
+    }
+
+    #email, #social-networks {
+        background: none;
+        border: none;
+        box-shadow: none;
+        justify-content: start;
+        height: auto;
+    }
+
+    #email {
+        margin-bottom: 40px;
+    }
+
+    #email-socnet-container {
+        padding: 5% 5% 7%;
+        display: grid;
+        
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background: #F1E4D6;
+        border: #E4CDB3;
+        border-radius: 20px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
+    }
+
+    #wb-title {
+        margin: 5%;
+        font-size: 1.4rem;
+        width: 90%;
+    }
+
+    #wb-votes {
+        font-size: 1rem;
+        width: 85%;
+    }
+
+    #wb-button {
+        height: 52px;
+        bottom: 30px;
+    }
+
+    #wb-votes .wb-vote:first-child {
+        width: 88%;
+    }
+
+    #wb-votes .wb-vote:nth-child(2) {
+        width: 80%;
+    }
+}
+
+@media (max-width: 540px) {
+    .messagers-button {
+        padding: 14px 15%;
+        margin: 0 5px;
+    }
+
+    #wb-title {
+        font-size: 1.3rem;
+    }
+
+    #wb-votes {
+        font-size: 0.9rem;
+    }
+
+    #wb-button {
+        height: 52px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 390px) {
+    .contacts-text {
+        font-size: 1rem;
+    }
+
+    #email-title, #socnet-text {
+        
+    }
+
+    #number-text {
+        font-size: 1.4rem;
+    }
+
+    #wb-votes {
+        margin: 0 6%;
+    }
+
+    .messagers-button {
+        padding: 12px 12%;
+        margin: 0 5px;
+    }
+}
