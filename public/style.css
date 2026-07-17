@@ -2125,10 +2125,6 @@ nav {
         font-size: 1rem;
     }
 
-    #email-title, #socnet-text {
-        
-    }
-
     #number-text {
         font-size: 1.4rem;
     }
@@ -2142,3 +2138,78 @@ nav {
         margin: 0 5px;
     }
 }
+
+
+/* Футер */
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2C1904;
+}
+
+#footer-container {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    column-gap: 15%;
+    row-gap: 30px;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 74px 44px;
+    justify-content: center;
+    align-items: center;
+
+
+    grid-template-areas: "d e"
+                         "f f";
+}
+
+#footer-logo {
+    grid-area: d;
+
+    position: relative;
+    background: url("/public/images/footer-logo.svg");
+    background-size: cover;
+    left: 48px;
+    width: 239px;
+    height: 26px;
+}
+
+#footer-nav {
+    grid-area: e;
+
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.footer-item {
+    margin: 0 5%
+}
+
+.footer-link {
+    color: #F8EEE3;
+    font-family: "Cormorant Unicase";
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#copyright {
+    grid-area: f;
+
+    position: relative;
+    left: 48px;
+    color: #F8EEE3;
+    font-family: "Forum";
+    font-size: 1.1rem;
+}
+
+
+
+
+
