@@ -1313,7 +1313,7 @@ nav {
     }
 
     #prodicts-pictures {
-        left: 18px;
+        left: 15px;
         width: 1120px;
     }
 
@@ -1547,7 +1547,7 @@ nav {
 
 
     #services-list {
-        width: calc(250% + 30px);
+        width: calc(2000px);
         left: 30px;
         display: flex;
     }
@@ -1581,7 +1581,7 @@ nav {
         left: 0;
         display: grid;
         column-gap: 80px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
 
@@ -1620,11 +1620,13 @@ nav {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 420px) {
 
     #services-note {
-        width: calc(84%);
-        left: 3%;
+        padding: 0;
+        width: calc(100% - 32px);
+        left: 15px;
+
     }
 
     #sn-button {
@@ -1641,6 +1643,7 @@ nav {
     #sn-list {
         width: 90%;
         font-size: 0.8rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .sn-list-item {
@@ -1650,4 +1653,264 @@ nav {
     #sn-button {
         margin: 20px 0 15px;
     }
+
+    #services-list {
+        left: 15px;
+    }
+
+    #services-list:last-child {
+        margin-right: 15px;
+    }
 }
+
+/* Контакты */
+
+#contacts-container {
+    position: relative;
+    margin-top: 20px;
+    width: calc(100% - 120px);
+    left: 60px;
+    column-gap: 5%;
+    row-gap: 12px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    grid-template-rows: 248px 1fr;
+    grid-template-areas: "a c"
+                         "b c";
+}
+
+.contacts-box {
+    background: #F1E4D6;
+    border: 2px solid #E4CDB3;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 0.25);
+}
+
+#number-and-messagers {
+    position: relative;
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#email-socnet-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-area: b;
+}
+
+#wb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    grid-area: c;
+}
+
+.contacts-text {
+    font-family: 'Cormorant Unicase';
+    font-size: 1.2rem;
+    color: #3B2105;
+}
+
+#number-img {
+    background: url("/public/images/phone.svg") no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    width: 27px;
+    height: 22.31px;
+    flex-shrink: 0;
+}
+
+#number {
+    position: relative;
+}
+
+#number-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 10px 5% ;
+}
+
+#number-text {
+    position: relative;
+    margin: 20px 8%;
+    font-family: "Days One";
+    font-size: 1.5rem;
+    color: #3B2105
+}
+
+#messagers {
+    position: relative;
+}
+
+#messagers-title {
+    display: flex;
+    align-items: center;
+    margin: 10px 5%;
+}
+
+#messagers-img {
+    background: url("/public/images/message.svg") no-repeat;
+    background-size: cover;
+    width: 27px;
+    height: 25px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#mt-text {
+    line-height: 95%;
+}
+
+#messagers-buttons {
+    margin: 10px 5% 20px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.messagers-button {
+    padding: 10px 14.5%;
+
+    background: #3F3224;
+    border: none;
+    border-radius: 5px;
+
+    color: #EED3B6;
+    font-family: "Forum";
+    font-size: 1rem;
+}
+
+#email {
+    position: relative;
+    height: 114px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#email-title {
+    margin: 0 5% 12px;
+    display: flex;
+    align-items: center;
+}
+
+#email-img {
+    background: url("/public/images/mail.svg") no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 19px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#email-text {
+    font-family: "Forum";
+    color: #3B2105;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 7%;
+}
+
+#email-text:visited, .socnet-link:visited {
+    color: #54320b;
+}
+
+#social-networks {
+    position: relative;
+    height: 157px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#socnet-title {
+    margin: 0 5% 10px;
+    display: flex;
+    align-items: center;
+}
+
+#socnet-img {
+    background: url("/public/images/social-network.svg");
+    background-size: cover;
+    width: 23px;
+    height: 21px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#socnet-list {
+    margin: 0 7%;
+    list-style: none;
+    font-family: "Forum";
+}
+
+.socnet-item {
+    margin-top: 8px;
+    display: flex;
+}
+
+.socnet-item::before {
+    content: "";
+    position: relative;
+    background: url("/public/images/socnet-marker.svg") no-repeat;
+    transform: translateY(40%);
+    font-size: cover;
+    width: 10px;
+    height: 10px;
+    margin-right: 2%
+}
+
+.socnet-link {
+    color: #3B2105;
+    cursor: pointer;
+}
+
+#wb-title {
+    position: absolute;
+    margin: 4%;
+    top: 0;
+    font-size: 2.2rem;
+    font-family: "Days One";
+    color: #3B2105;
+}
+
+#wb-votes {
+    margin: 0 12%;
+    list-style: none;
+    font-family: "Days One";
+    color: #5A4024;
+    font-size: 1.2rem;
+}
+
+#wb-votes .wb-vote:first-child {
+    width: 70%;
+}
+
+.wb-vote {
+    margin-bottom: 25px;
+}
+
+#wb-button {
+    position: absolute;
+    bottom: 10%;
+
+    background: #623403;
+
+    font-family: "Cormorant Unicase";
+    font-size: 1.2rem;
+    color: #EED3B6;
+
+    width: 44%;
+    height: 60px;
+    border-radius: 5px;
+    left: 28%;
+}
+
