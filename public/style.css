@@ -202,6 +202,15 @@ nav {
     font-size: 1rem;
 }
 
+@media (hover: hover) and (min-width: 721px) {
+    .main-item:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: #653B0D;
+        text-underline-offset: 10px;
+    }
+}
+
 
 @media (orientation: portrait) and (min-width: 320px) {
 
@@ -244,7 +253,7 @@ nav {
         width: 100%;
         position: absolute;
         background: #ebcba8;
-        transition: transform 1s;
+        transition: transform 1s ease;
     }
 
     nav.show-menu {
@@ -287,18 +296,10 @@ nav {
 #main-pictures {
     position: relative;
     width: 100%;
-    /* transform: translateX(calc(-86.25% - 89.44% * 0)); */
-    /* transform: translateX(calc(-82.08% - 60px - (85.27% + 60px) * 0)); */
-    transform: translateX(calc(-77.91% - 120px  - (85.27% + 60px) * 0));
-    /* transform: translateX(calc(-82.04%)); */
+    transform: translateX(calc(-77.91% - 120px));
     display: flex;
     transition: transform 1000ms ease-in-out;
 }
-
-/* .main-picture:nth-child(1){
-    margin-left: 0;
-} */
-
 
 .main-picture {
     position: relative;
@@ -362,25 +363,16 @@ nav {
 
 }
 
-/* @media (min-width: 1600px) {
-    .mp-title {
-    font-size: 28pt;
-    }
-} */
-
 #mpt1 {
     width: 800px;
 }
 
 #mpt2 {
     width: 640px;
-    /* top: 170px; */
-    
 }
 
 #mpt3 {
     width: 800px;
-    /* top: 170px; */
 }
 
 .mp-note {
@@ -403,12 +395,10 @@ nav {
 
 #mpn2 {
     width: 500px;
-    /* top: 190px */
 }
 
 #mpn3 {
     width: 400px;
-    /* top: 190px */
 }
 
 .mp-button {
@@ -429,9 +419,9 @@ nav {
     cursor: pointer;
 }
 
-/* #mpb2, #mpb3 {
-    top: 370px;
-} */
+.mp-button:active {
+    background: #bc8e2b;
+}
 
 
 #underline {
@@ -515,9 +505,6 @@ nav {
         font-size: 1.8rem;
     }
 }
-
-
-
 
 @media (max-width: 1400px) and (orientation: landscape) {
     #mp2 {
@@ -853,9 +840,6 @@ nav {
     }
 }
 
-
-
-
 /* Контейнеры */
 
 .container {
@@ -1178,8 +1162,6 @@ nav {
     z-index: 3;
 }
 
-
-
 .product-title {
     position: absolute;
     width: 50%;
@@ -1206,10 +1188,6 @@ nav {
         top: 3%;
     }
 }
-
-/* .product-box:hover {
-    width: 40%;
-} */
 
 #prod-pic1 {
     background: url("/public/images/prod-picture1.webp") no-repeat;
@@ -1258,8 +1236,6 @@ nav {
         width: 80%;
     }
 }
-
-
 
 @media (max-width: 760px) {
     .product-box {
@@ -1322,10 +1298,7 @@ nav {
     }
 }
 
-
 /* Услуги */
-
-
 
 #services-info {
     margin-top: 20px;
@@ -1469,7 +1442,6 @@ nav {
     left: 40%;
 
     background: #3B2105;
-    border: 2px solid #412609;
     transition: background 300ms ease;
     color: #D4AE87;
     font-family: "Cormorant Unicase";
@@ -1484,6 +1456,11 @@ nav {
     #sn-button:hover {
         background: #573613;
     }
+}
+
+#sn-button:active {
+    transition: background 0ms;
+    background: #6a4217;
 }
 
 @media (min-width: 1380px) {
@@ -1932,6 +1909,16 @@ nav {
     }
 }
 
+.messagers-button:active {
+    transition: 0ms;
+    background-color: #735d45;
+}
+
+#wb-button:active {
+    transition: 0ms;
+    background: #855119;
+}
+
 @media (max-width: 1280px) {
     #wb-button {
         width: 60%;
@@ -2266,6 +2253,3 @@ footer {
         width: 170px;
     }
 }
-
-
-
