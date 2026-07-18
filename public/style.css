@@ -11,35 +11,35 @@ html {
 
 @font-face {
     font-family: 'Cormorant Unicase';
-    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Light.woff2') format('woff2');
+    src: url('/fonts/cormorant-unicase/CormorantUnicase-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cormorant Unicase';
-    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Regular.woff2') format('woff2');
+    src: url('/fonts/cormorant-unicase/CormorantUnicase-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cormorant Unicase';
-    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Medium.woff2') format('woff2');
+    src: url('/fonts/cormorant-unicase/CormorantUnicase-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cormorant Unicase';
-    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-SemiBold.woff2') format('woff2');
+    src: url('/fonts/cormorant-unicase/CormorantUnicase-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cormorant Unicase';
-    src: url('/public/fonts/cormorant-unicase/CormorantUnicase-Bold.woff2') format('woff2');
+    src: url('/fonts/cormorant-unicase/CormorantUnicase-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
@@ -48,21 +48,21 @@ html {
 
 @font-face {
     font-family: "David Libre";
-    src: url("/public/fonts/david-libre/DavidLibre-Bold.woff2");
+    src: url("/fonts/david-libre/DavidLibre-Bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "David Libre";
-    src: url("/public/fonts/david-libre/DavidLibre-Medium.woff2");
+    src: url("/fonts/david-libre/DavidLibre-Medium.woff2");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "David Libre";
-    src: url("/public/fonts/david-libre/DavidLibre-Regular.woff2");
+    src: url("/fonts/david-libre/DavidLibre-Regular.woff2");
     font-weight: 400;
     font-style: normal;
 }
@@ -71,7 +71,7 @@ html {
 
 @font-face {
     font-family: "Days One";
-    src: url("/public/fonts/days-one/DaysOne-Regular.woff2");
+    src: url("/fonts/days-one/DaysOne-Regular.woff2");
     font-weight: 700;
     font-style: normal;
 }
@@ -80,7 +80,7 @@ html {
 
 @font-face {
     font-family: "Forum";
-    src: url("/public/fonts/forum-font/Forum-Regular.woff2");
+    src: url("/fonts/forum-font/Forum-Regular.woff2");
     font-weight: 400;
     font-style: normal;
 }
@@ -89,7 +89,7 @@ html {
 
 @font-face {
     font-family: "Segoe Mono Unicode";
-    src: url("/public/fonts/SegoeMonoUnicode/SegoeMonoUnicode-Regular.woff2");
+    src: url("/fonts/SegoeMonoUnicode/SegoeMonoUnicode-Regular.woff2");
     font-weight: 400;
     font-style: normal;
 }
@@ -98,49 +98,49 @@ html {
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-Bold.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-Bold.woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-BoldItalic.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-BoldItalic.woff2");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-Italic.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-Italic.woff2");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-Light.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-Light.woff2");
     font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-LightItalic.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-LightItalic.woff2");
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-Medium.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-Medium.woff2");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu";
-    src: url("/public/fonts/ubuntu-font/Ubuntu-Medium.woff2");
+    src: url("/fonts/ubuntu-font/Ubuntu-Medium.woff2");
     font-weight: 500;
     font-style: normal;
 }
@@ -173,7 +173,7 @@ header {
 
 #header-logo {
     position: relative;
-    background: url("/public/images/LIGHTLAND.svg") no-repeat;
+    background: url("/images/LIGHTLAND.svg") no-repeat;
     width: 239px;
     height: 26px;
     background-size: contain;
@@ -279,8 +279,6 @@ nav {
     }
 }
 
-
-
 /* Главная */
 
 #main {
@@ -336,19 +334,19 @@ nav {
 }
 
 #mp1 {
-    background: url("/public/images/main-picture1.webp") no-repeat;
+    background: url("/images/main-picture1.webp") no-repeat;
     background-size: cover;
     background-position: bottom;
 }
 
 #mp2 {
-    background: url("/public/images/main-picture2.webp") no-repeat;
+    background: url("/images/main-picture2.webp") no-repeat;
     background-size: cover;
     background-position: left top;
 }
 
 #mp3 {
-    background: url("/public/images/main-picture3.webp") no-repeat;
+    background: url("/images/main-picture3.webp") no-repeat;
     background-size: cover;
 }
 
@@ -881,7 +879,7 @@ nav {
 }
 
 #about-picture1 {
-    background: url("/public/images/about-picture1.webp") no-repeat;
+    background: url("/images/about-picture1.webp") no-repeat;
     background-size: 120%;
     background-position: top -40px center;
     z-index: 2;
@@ -889,7 +887,7 @@ nav {
 }
 
 #about-picture2 {
-    background: url("/public/images/about-picture2.webp") no-repeat;
+    background: url("/images/about-picture2.webp") no-repeat;
     background-size: 120%;
     background-position: top -40px center;
     z-index: 1;
@@ -897,7 +895,7 @@ nav {
 }
 
 #about-picture3 {
-    background: url("/public/images/about-picture3.webp") no-repeat;
+    background: url("/images/about-picture3.webp") no-repeat;
     background-size: 120%;
     background-position: top -40px center;
     z-index: 2;
@@ -1190,28 +1188,28 @@ nav {
 }
 
 #prod-pic1 {
-    background: url("/public/images/prod-picture1.webp") no-repeat;
+    background: url("/images/prod-picture1.webp") no-repeat;
     background-size: cover;
 }
 
 #prod-pic2 {
-    background: url("/public/images/prod-picture2.webp") no-repeat;
+    background: url("/images/prod-picture2.webp") no-repeat;
     background-size: cover;
 }
 
 #prod-pic3 {
-    background: url("/public/images/prod-picture3.webp") no-repeat;
+    background: url("/images/prod-picture3.webp") no-repeat;
     background-size: cover;
     background-position: top left -240px;
 }
 
 #prod-pic4 {
-    background: url("/public/images/prod-picture4.webp") no-repeat;
+    background: url("/images/prod-picture4.webp") no-repeat;
     background-size: cover;
 }
 
 #prod-pic5 {
-    background: url("/public/images/prod-picture5.webp") no-repeat;
+    background: url("/images/prod-picture5.webp") no-repeat;
     background-size: cover;
     background-position: top left -140px;
 }
@@ -1694,7 +1692,7 @@ nav {
 }
 
 #number-img {
-    background: url("/public/images/phone.svg") no-repeat;
+    background: url("/images/phone.svg") no-repeat;
     background-size: cover;
     margin-right: 10px;
     width: 27px;
@@ -1732,7 +1730,7 @@ nav {
 }
 
 #messagers-img {
-    background: url("/public/images/message.svg") no-repeat;
+    background: url("/images/message.svg") no-repeat;
     background-size: cover;
     width: 27px;
     height: 25px;
@@ -1784,7 +1782,7 @@ nav {
 }
 
 #email-img {
-    background: url("/public/images/mail.svg") no-repeat;
+    background: url("/images/mail.svg") no-repeat;
     background-size: cover;
     width: 25px;
     height: 19px;
@@ -1819,7 +1817,7 @@ nav {
 }
 
 #socnet-img {
-    background: url("/public/images/social-network.svg");
+    background: url("/images/social-network.svg");
     background-size: cover;
     width: 23px;
     height: 21px;
@@ -1841,7 +1839,7 @@ nav {
 .socnet-item::before {
     content: "";
     position: relative;
-    background: url("/public/images/socnet-marker.svg") no-repeat;
+    background: url("/images/socnet-marker.svg") no-repeat;
     transform: translateY(40%);
     font-size: cover;
     width: 10px;
@@ -2160,7 +2158,7 @@ footer {
     grid-area: d;
 
     position: relative;
-    background: url("/public/images/footer-logo.svg");
+    background: url("/images/footer-logo.svg");
     background-size: cover;
     left: 48px;
     width: 239px;

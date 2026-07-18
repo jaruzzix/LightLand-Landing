@@ -49,11 +49,6 @@ function goToProducts() {
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
-
-// scrollControls.forEach((control) => {
-//     control.addEventListener("click", () => {})
-// })
-
 function getOrientation() {
   if (window.innerWidth > window.innerHeight) {
     return 'landscape';
@@ -108,11 +103,11 @@ scrollControls.forEach((control) => {
 })
 
 // изменение размера карточки
-function changeProductSize (exeptionIndex, returnSize = false) {
+function changeProductSize (exeptionIndex, returnSize = false, width = '17%') {
     
     products.forEach((product) => {
         if (returnSize) {
-            product.style.width = '17%';
+            product.style.width = width;
             return;
         }
 
@@ -135,7 +130,6 @@ function removeProd(index) {
 
 let firstProdAnim = true;
 function startProductAnimation() {
-    if (document.body.offsetWidth >= 760) {
         products[productIndex].style.width = '45%';
         addProd(productIndex);
 
@@ -153,11 +147,6 @@ function startProductAnimation() {
         }
 
         changeProductSizeTimeout = setTimeout(startProductAnimation, 2800);
-    }
-    // else {
-        
-
-    // }
 }
     
 function stopProductAnimation() {
@@ -186,9 +175,32 @@ if (isDesktop) {
     })
 }
 
-
-
-
 startSliding();
-startProductAnimation();
-// goToSlide(2);
+
+let isAnimate = false;
+const resizeObserver = new ResizeObserver((entries) => {
+    entries.forEach((entry) => {
+        const {width} = entry.contentRect;
+        if (width <= 420) {
+            stopProductAnimation();
+            changeProductSize(null, true, '210px');
+            isAnimate = false;
+        }
+        else if (width <= 580) {
+            stopProductAnimation();
+            changeProductSize(null, true, '270px');
+            isAnimate = false;
+        }
+        else if (width <= 760) {
+            stopProductAnimation();
+            changeProductSize(null, true, '400px');
+            isAnimate = false;
+        }
+        else if (!isAnimate) {
+            startProductAnimation();
+            isAnimate = true;
+        }
+    })
+})
+
+resizeObserver.observe(document.body);
