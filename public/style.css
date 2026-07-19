@@ -265,7 +265,12 @@ nav {
         margin-left: 5%;
         flex-direction: column;
         justify-content: space-between;
-        height: 125px;
+        height: 160px;
+        width: 90%;
+    }
+
+    .main-item a{
+        font-size: 1.2rem;
     }
 
     #nav-menu-btn {
@@ -799,6 +804,7 @@ nav {
 
 .heading {
     position: relative;
+    width: calc(100% - 60px);
     left: 60px;
     top:0;
     font-size: 3rem;
