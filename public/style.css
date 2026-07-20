@@ -261,15 +261,24 @@ nav {
 
     #main-nav {
         margin-top: 80px;
-        margin-left: 5%;
         flex-direction: column;
-        justify-content: space-between;
-        height: 250px;
+        justify-content: start;
+        height: 220px;
         width: 90%;
     }
 
     #main-nav a{
-        font-size: 1.7rem;
+        font-size: 1.3rem;
+    }
+
+    .main-item {
+        position: relative;
+        width: 100%;
+        padding: 2.5% 5%;
+    }
+
+    .main-item:active {
+        background: #d4b493;
     }
 
     #nav-menu-btn {
