@@ -1,7 +1,7 @@
 const mainPictures = document.querySelector("#main-pictures");
 const scrollControls = document.querySelectorAll(".scrool");
 const nav = document.querySelector('nav');
-let pictureIndex;
+let pictureIndex = -1;
 let slidingInterval;
 let transformValue;
 
@@ -15,23 +15,16 @@ let changeProductSizeTimeout;
 const isDesktop = window.matchMedia('(pointer: fine)').matches;
 
 
-
-if (document.body.offsetWidth < 1200 && getOrientation() == "portrait") {
-    pictureIndex = 0;
-}
-else {
-    pictureIndex = -1;
-}
-
 function showMenu() {
     if (document.body.offsetWidth < 720){
         const isShowed = nav.classList.toggle("show-menu"); 
 
         if (isShowed) {
             document.body.style.overflow = "hidden";
-        }
-        else {
+            document.documentElement.style.overflow = "hidden";
+        } else {
             document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
         }
 
     }
