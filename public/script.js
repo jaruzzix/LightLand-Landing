@@ -33,7 +33,11 @@ function showMenu() {
 }
 
 function goToStore() {
-    window.location.href = 'https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/calc';
+    window.location.href = 'https://www.wildberries.ru';
+}
+
+function toContact() {
+    document.getElementById('contacts').scrollIntoView({ behavior: 'smooth' });
 }
 
 function goToServices() {
