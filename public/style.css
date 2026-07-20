@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -237,12 +238,10 @@ nav {
 
 @media (max-width: 720px) {
     header {
-        
         width: 90%;
         max-width: 640px;
         justify-content: space-between;
         z-index: 5;
-
     }
 
     nav {
@@ -389,7 +388,6 @@ nav {
 
     text-transform: uppercase;
     font-size: 1rem;
-
 }
 
 #mpn1 {
@@ -1256,9 +1254,29 @@ nav {
         width: 2100px;
     }
 
-    #pictures-cintainer {
+    #pictures-container {
         flex-wrap: nowrap;
         overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    #pictures-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (hover: hover) {
+        #pictures-container {
+            padding-bottom: 12px;
+        }
+
+        #pictures-container:hover {
+            scrollbar-width: thin;
+            scrollbar-color: #2C1904 rgba(0, 0, 0, 0);
+        }
+
+        #pictures-container::-webkit-scrollbar {
+            display: block;
+        }
     }
 
     .product-box::before {
@@ -1317,8 +1335,29 @@ nav {
 #services-container {
     display: flex;
     position: relative;
+    overflow-x: auto;
     width: 68%;
+    scrollbar-width: none;
 }
+
+
+
+@media (hover: hover) {
+    #services-container {
+        padding-bottom: 12px;
+    }
+
+    #services-container:hover {
+        scrollbar-width: thin;
+        scrollbar-color: #2C1904 rgba(0, 0, 0, 0);
+    }
+
+    #services-container::-webkit-scrollbar {
+        display: block;
+    }
+}
+
+
 
 #services-list {
     position: relative;
@@ -1604,10 +1643,9 @@ nav {
 @media (max-width: 420px) {
 
     #services-note {
-        padding: 0;
-        width: calc(100% - 32px);
+        
+        width: calc(90% - 32px);
         left: 15px;
-
     }
 
     #sn-button {

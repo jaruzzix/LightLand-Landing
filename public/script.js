@@ -21,10 +21,12 @@ function showMenu() {
 
         if (isShowed) {
             document.body.style.overflow = "hidden";
-            document.documentElement.style.overflow = "hidden";
+            document.body.style.position = "fixed";
+            document.body.style.width = "100%";
         } else {
             document.body.style.overflow = "";
-            document.documentElement.style.overflow = "";
+            document.body.style.position = "relative";
+            document.body.style.width = "100%";
         }
 
     }
