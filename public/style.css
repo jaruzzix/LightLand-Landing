@@ -1324,6 +1324,10 @@ nav {
     .product-box:last-child {
         margin-right: 18px;
     }
+
+    .product-title {
+        font-size: 1.1rem;
+    }
 }
 
 /* Услуги */
