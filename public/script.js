@@ -16,28 +16,39 @@ let changeProductSizeTimeout;
 const isDesktop = window.matchMedia('(pointer: fine)').matches;
 
 let startX;
-
 let endX;
+let isSwiped = false;
 
-
+// свайпы
 main.addEventListener('touchstart', (event) => {
     startX = event.touches[0].clientX;
 });
 
 main.addEventListener('touchend', (event) => {
     endX = event.changedTouches[0].clientX;
-    const deltaX = endX - startX
-    if (deltaX >= 80) {
-        console.log("Свайп вправо");
-        stopSliding();
-        pictureIndex = pictureIndex - 2 >= -1? pictureIndex - 2: -1;
-        startSliding();
+    const deltaX = endX - startX;
+    console.log(deltaX);
+    if (!isSwiped) {
+        if (deltaX >= 50) {
+            stopSliding();
+            pictureIndex = pictureIndex - 2 >= -1? pictureIndex - 2: -1;
+            startSliding();
+            isSwiped = true;
+        }
+        else if (deltaX <= -50) {
+            stopSliding();
+            startSliding();
+            isSwiped = true;
+        }
     }
-    else if (deltaX <= -80) {
-        console.log("Свайп влево");
-        stopSliding();
-        startSliding();
+    else {
+        return;
     }
+
+    setTimeout(() => {
+        isSwiped = false;
+    }, 1000);
+
 });
 
 
