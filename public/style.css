@@ -1696,11 +1696,7 @@ nav {
     }
 
     #services-list {
-        left: 15px;
-    }
-
-    #services-list:last-child {
-        margin-right: 15px;
+        padding: 0 15px;
     }
 }
 
