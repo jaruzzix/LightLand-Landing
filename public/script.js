@@ -1,3 +1,4 @@
+const main = document.querySelector("#main");
 const mainPictures = document.querySelector("#main-pictures");
 const scrollControls = document.querySelectorAll(".scrool");
 const nav = document.querySelector('nav');
@@ -13,6 +14,33 @@ let productIndex = 0;
 let changeProductSizeTimeout;
 
 const isDesktop = window.matchMedia('(pointer: fine)').matches;
+
+let startX;
+
+let endX;
+
+
+main.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+});
+
+main.addEventListener('touchend', (event) => {
+    endX = event.changedTouches[0].clientX;
+    const deltaX = endX - startX
+    if (deltaX >= 80) {
+        console.log("Свайп вправо");
+        stopSliding();
+        pictureIndex = pictureIndex - 2 >= -1? pictureIndex - 2: -1;
+        startSliding();
+    }
+    else if (deltaX <= -80) {
+        console.log("Свайп влево");
+        stopSliding();
+        startSliding();
+    }
+});
+
+
 
 
 function showMenu() {
@@ -79,7 +107,7 @@ function startSliding() {
     scrollControls[pictureIndex % 3].checked = true;
 
     slidingInterval = setTimeout(() => {
-        if (pictureIndex === 3) {
+        if (pictureIndex >= 3) {
             pictureIndex = 0;
             goToSlide(pictureIndex, false);
         }

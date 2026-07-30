@@ -1233,15 +1233,12 @@ nav {
     }
 
     .product-title {
+        left: 5%;
         font-size: 1.8rem;
     }
 }
 
 @media (max-width: 870px) {
-
-    .product-title {
-        font-size: 1.6rem;
-    }
 
     #products-title {
         width: 80%;
@@ -2244,7 +2241,7 @@ footer {
 
     position: relative;
     display: flex;
-    left: 48px;
+    padding-left: 48px;
     color: #F8EEE3;
     font-family: "Forum";
     font-size: 1.1rem;
@@ -2262,7 +2259,7 @@ footer {
 
 @media (max-width: 1060px) {
     #footer-logo, #copyright {
-        left: 24px;
+        padding-left: 24px;
     }
 }
 
