@@ -1577,13 +1577,9 @@ nav {
 
 
     #services-list {
-        width: calc(2000px);
-        left: 30px;
+        width: 2000px;
+        padding: 0 30px;
         display: flex;
-    }
-
-    #services-list:last-child {
-        margin-right: 30px;
     }
 
     .service-box {
