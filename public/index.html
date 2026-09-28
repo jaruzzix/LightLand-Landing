@@ -21,42 +21,27 @@
             </nav>
             <button id="nav-menu-btn" onclick="showMenu()">
                 <svg id="menu-btn-icon" width="24" height="24" viewBox="0 0 160 120">
-                    <path fill="#3B2105" d="M 10 0 A 1 1 0 0 0 10 20 H 150 A 1 1 0 0 0 150 0 M 10 50 A 1 1 0 0 0 10 70 H 150 A 1 1 0 0 0 150 50 M 10 100 A 1 1 0 0 0 10 120 H 150 A 1 1 0 0 0 150 100 Z">
+                    <path fill="#3B2105" d="M 10 0 A 1 1 0 0 0 10 20 H 150 A 1 1 0 0 0 150 0 M 10 50 A 1 1 0 0 0 10 70 H 150 A 1 1 0 0 0 150 50 M 10 100 A 1 1 0 0 0 10 120 H 150 A 1 1 0 0 0 150 100 Z" />
                 </svg>
             </button>
         </header>
 
         <div class="container" id="main">
             <div id="main-pictures">
-                <div class="main-picture" id="mp3">
-                    <h1 class="mp-title" id="mpt3">Создаем свет, в который хочется возвращаться</h1>
-                    <h3 class="mp-note" id="mpn3">Организация комфортного освещения в домах, студиях, офисах</h3>
-                    <button class="mp-button" id="mpb3" onclick="goToServices()">Узнать больше</button>
+                <div class="main-picture mp1">
+                    <h1 class="mp-title mpt1">LIGHTLAND - ваш источник идеального света</h1>
+                    <h2 class="mp-note mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h2>
+                    <button class="mp-button mpb1" onclick="goToStore()">Каталог</button>
                 </div>
-                <div class="main-picture" id="mp1">
-                    <h1 class="mp-title" id="mpt1">LIGHTLAND - ваш источник идеального света</h1>
-                    <h4 class="mp-note" id="mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
-                    <button class="mp-button" id="mpb1" onclick="goToStore()">Каталог</button>
+                <div class="main-picture mp2">
+                    <h2 class="mp-title mpt2">Энергоэф&shyфективность и качество</h2>
+                    <h3 class="mp-note mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
+                    <button class="mp-button mpb2" onclick="goToProducts()">Узнать больше</button>
                 </div>
-                <div class="main-picture" id="mp2">
-                    <h1 class="mp-title" id="mpt2">Энергоэф&shyфективность и качество</h1>
-                    <h3 class="mp-note" id="mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
-                    <button class="mp-button" id="mpb2" onclick="goToProducts()">Узнать больше</button>
-                </div>
-                <div class="main-picture" id="mp3">
-                    <h1 class="mp-title" id="mpt3">Создаем свет, в который хочется возвращаться</h1>
-                    <h3 class="mp-note" id="mpn3">Организация комфортного освещения в домах, студиях, офисах</h3>
-                    <button class="mp-button" id="mpb3" onclick="goToServices()">Узнать больше</button>
-                </div>
-                <div class="main-picture" id="mp1">
-                    <h1 class="mp-title" id="mpt1">LIGHTLAND - ваш источник идеального света</h1>
-                    <h4 class="mp-note" id="mpn1">Светодиоды, лампы, светильники и решения для дома и бизнеса</h3>
-                    <button class="mp-button" id="mpb1" onclick="goToStore()">Каталог</button>
-                </div>
-                <div class="main-picture" id="mp2">
-                    <h1 class="mp-title" id="mpt2">Энергоэффективность и качество</h1>
-                    <h3 class="mp-note" id="mpn2">Экономия, долговечность и комфорт в каждом светильнике</h3>
-                    <button class="mp-button" id="mpb2" onclick="goToProducts()">Узнать больше</button>
+                <div class="main-picture mp3">
+                    <h2 class="mp-title mpt3">Создаем свет, в который хочется возвращаться</h2>
+                    <h3 class="mp-note mpn3">Организация комфортного освещения в домах, студиях, офисах</h3>
+                    <button class="mp-button mpb3" onclick="goToServices()">Узнать больше</button>
                 </div>
             </div>
             
@@ -72,7 +57,7 @@
         </div>
 
         <div class="container" id="about">
-            <h1 class="heading" id="about-title">О нас</h1>
+            <h2 class="heading" id="about-title">О нас</h2>
             <div class="content">
                 <div class="content-box" id="about-picture1">
                     <p class="content-text" id="text1">LIGHTLAND — магазин светодиодов, светильников и ламп на любой вкус.</p>
@@ -89,7 +74,7 @@
         </div>
 
         <div class="container" id="products">
-            <h1 class="heading"  id="products-title">В нашем каталоге можно найти товары на любой вкус</h1>
+            <h2 class="heading"  id="products-title">В нашем каталоге можно найти товары на любой вкус</h2>
             <div id="pictures-container">
                 <ul id="prodicts-pictures">
                     <li class="product-box" id="prod-pic1"><p class="product-title">Светодиодные ленты</p></li>
@@ -103,12 +88,12 @@
         </div>
 
         <div class="container" id="services">
-            <h1 class="heading"  id="services-title">Наши услуги</h1>
+            <h2 class="heading"  id="services-title">Наши услуги</h2>
             <div id="services-info">
                 <div id="services-container">
                     <ul id="services-list">
                         <li class="service-box">
-                            <h2 class="sb-title">Консультация</h2>
+                            <h3 class="sb-title">Консультация</h3>
                             <ul class="sb-description">
                                 <li class="sb-content">Поможем с выбором</li>
                                 <li class="sb-content">Подберем для вас подходящие товары</li>
@@ -117,7 +102,7 @@
                             <div class="cost-box"><p>Бесплатно</p></div>
                         </li>
                         <li class="service-box">
-                            <h2 class="sb-title">Создание схемы оформления света</h2>
+                            <h3 class="sb-title">Создание схемы оформления света</h3>
                             <ul class="sb-description">
                                 <li class="sb-content">Спланируем, где установить свет в вашем помещении</li>
                                 <li class="sb-content">Подберем необходимые товары</li>
@@ -126,7 +111,7 @@
                             <div class="cost-box"><p>от <span class="cost">1500 ₽</span></p></div>
                         </li>
                         <li class="service-box">
-                            <h2 class="sb-title">Проект под ключ</h2>
+                            <h3 class="sb-title">Проект под ключ</h3>
                             <ul class="sb-description">
                                 <li class="sb-content">Самостоятельно все установим</li>
                                 <li class="sb-content">Все монтажные работы на нас</li>
@@ -135,7 +120,7 @@
                             <div class="cost-box"><p>от <span class="cost">8000 ₽</span> </p></div>
                         </li>
                         <li class="service-box">
-                            <h2 class="sb-title">Замена старых ламп на LED</h2>
+                            <h3 class="sb-title">Замена старых ламп на LED</h3>
                             <ul class="sb-description">
                                 <li class="sb-content">Под ключ</li>
                                 <li class="sb-content">Светлее на 30%</li>
@@ -144,7 +129,7 @@
                             <div class="cost-box"><p>от <span class="cost">1000 ₽</span></p></div>
                         </li>
                         <li class="service-box">
-                            <h2 class="sb-title">Настройка умного света</h2>
+                            <h3 class="sb-title">Настройка умного света</h3>
                             <ul class="sb-description">
                                 <li class="sb-content">Настройка управления с телефона, жестами, звуковом</li>
                                 <li class="sb-content">Настройка сценариев (Кино, Утро, Вечеринка)</li>
@@ -156,7 +141,7 @@
                 </div>
 
                 <div id="services-note">
-                    <h3 id="sn-title">Почему стоит выбирать именно нас?</h3>
+                    <h2 id="sn-title">Почему стоит выбирать именно нас?</h3>
                     <ul id="sn-list">
                         <li class="sn-list-item">Стоимость ниже чем в других компаниях</li>
                         <li class="sn-list-item">В наших складах уже есть необходимые товары, что экономит ваше время</li>
@@ -170,7 +155,7 @@
         </div>
 
         <div class="container" id="contacts">
-            <h1 class="heading" id="contacts-title">Наши контакты</h1>
+            <h2 class="heading" id="contacts-title">Наши контакты</h2>
             <div id="contacts-container">
                 <div class="contacts-box" id="number-and-messagers">
                     <div id="number">

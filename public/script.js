@@ -1,5 +1,6 @@
 const main = document.querySelector("#main");
-const mainPictures = document.querySelector("#main-pictures");
+const mainPicturesContainer = document.querySelector("#main-pictures");
+
 const scrollControls = document.querySelectorAll(".scrool");
 const nav = document.querySelector('nav');
 let pictureIndex = -1;
@@ -18,6 +19,7 @@ const isDesktop = window.matchMedia('(pointer: fine)').matches;
 let startX;
 let endX;
 let isSwiped = false;
+
 
 // свайпы
 main.addEventListener('touchstart', (event) => {
@@ -52,8 +54,21 @@ main.addEventListener('touchend', (event) => {
 });
 
 
+function createPicturesSlider(container) {
+    const pictures = container.querySelectorAll(".main-picture");
+    const lstLength = pictures.length;
+    
+    container.append(pictures[0].cloneNode(true));
+    container.append(pictures[1].cloneNode(true));
+    container.prepend(pictures[lstLength - 1].cloneNode(true));
+    container.prepend(pictures[lstLength - 2].cloneNode(true));
+}
+
+createPicturesSlider(mainPicturesContainer)
 
 
+
+// Для меню-бургера
 function showMenu() {
     if (document.body.offsetWidth < 720){
         const isShowed = nav.classList.toggle("show-menu"); 
@@ -98,16 +113,16 @@ function getOrientation() {
 // Перемещение слайдера Главной
 function goToSlide(index, animate = true) {
 
-    transformValue = `calc(-77.91% - 120px  - (85.27% + 60px) * ${index})`;
+    transformValue = `calc(-77.91% - 120px  - (85.27% + 60px) * ${index + 1})`;
 
     if (!animate) {
-        mainPictures.style.transition = "none";
+        mainPicturesContainer.style.transition = "none";
     }
     else {
-        mainPictures.style.transition = "transform 1000ms ease-in-out";
+        mainPicturesContainer.style.transition = "transform 1000ms ease-in-out";
     }
     
-    mainPictures.style.transform = `translateX(${transformValue})`;
+    mainPicturesContainer.style.transform = `translateX(${transformValue})`;
 }
 
 // запуск слайдера
@@ -135,7 +150,7 @@ function stopSliding() {
 scrollControls.forEach((control) => {
     control.addEventListener('change', () => {
         stopSliding();
-        pictureIndex = Number(control.getAttribute('value')) - 1;
+        pictureIndex = Number(control.getAttribute('value') - 1);
         startSliding();
     })
 })
