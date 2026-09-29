@@ -29,11 +29,10 @@ main.addEventListener('touchstart', (event) => {
 main.addEventListener('touchend', (event) => {
     endX = event.changedTouches[0].clientX;
     const deltaX = endX - startX;
-    console.log(deltaX);
     if (!isSwiped) {
         if (deltaX >= 50) {
             stopSliding();
-            pictureIndex = pictureIndex - 2 >= -1? pictureIndex - 2: -1;
+            pictureIndex = pictureIndex - 2;
             startSliding();
             isSwiped = true;
         }
@@ -112,8 +111,8 @@ function getOrientation() {
 
 // Перемещение слайдера Главной
 function goToSlide(index, animate = true) {
-
     transformValue = `calc(-77.91% - 120px  - (85.27% + 60px) * ${index + 1})`;
+
 
     if (!animate) {
         mainPicturesContainer.style.transition = "none";
@@ -127,14 +126,24 @@ function goToSlide(index, animate = true) {
 
 // запуск слайдера
 function startSliding() {
-
     goToSlide(++pictureIndex);
 
-    scrollControls[pictureIndex % 3].checked = true;
+    if (pictureIndex < 0) {
+        scrollControls[scrollControls.length - 1].checked = true
+    }
+    else {
+        scrollControls[pictureIndex % 3].checked = true;
+    }
+    
 
     slidingInterval = setTimeout(() => {
         if (pictureIndex >= 3) {
             pictureIndex = 0;
+            goToSlide(pictureIndex, false);
+        }
+        else if (pictureIndex < 0) {
+            const pictures = mainPicturesContainer.querySelectorAll(".main-picture");
+            pictureIndex = pictures.length - 5; 
             goToSlide(pictureIndex, false);
         }
     }, 1000);
