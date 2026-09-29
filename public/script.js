@@ -7,6 +7,9 @@ let pictureIndex = -1;
 let slidingInterval;
 let transformValue;
 
+const backSlidingTrigger = document.querySelector("#main-back");
+const nextSlidingTrigger = document.querySelector("#main-next");
+
 const menuButton = document.querySelector("#nav-menu-btn");
 
 const products = Array.from(document.querySelectorAll(".product-box"));
@@ -51,6 +54,45 @@ main.addEventListener('touchend', (event) => {
     }, 1000);
 
 });
+
+
+// свайпы через кнопки
+let pointerType;
+
+function mouseSlidingTrigger(trigger, indexChange = 0) {
+    trigger.addEventListener("pointerdown", (event) => {
+        pointerType = event.pointerType;
+    });
+
+    trigger.addEventListener("mouseenter", () => {
+        trigger.classList.add("show");
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+        trigger.classList.remove("show");
+    });
+
+    trigger.addEventListener("click", () => {
+        if (pointerType === "mouse") {
+            if (!isSwiped) {
+                stopSliding();
+                pictureIndex = pictureIndex - indexChange;
+                startSliding();
+                isSwiped = true;
+            }
+            else {
+                return;
+            } 
+        }
+
+        setTimeout(() => {
+            isSwiped = false;
+        }, 1000);
+    });
+}
+
+mouseSlidingTrigger(backSlidingTrigger, 2);
+mouseSlidingTrigger(nextSlidingTrigger);
 
 
 function createPicturesSlider(container) {

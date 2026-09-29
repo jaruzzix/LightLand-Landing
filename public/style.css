@@ -322,6 +322,59 @@ nav {
     max-height: 670px;
 }
 
+.sliding-trigger {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 85vh;
+    max-height: 670px;
+    width: 140px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 250ms ease;
+}
+
+#main-back {
+    left: 0;
+}
+
+#main-next {
+    right: 0;
+}
+
+
+.sliding-trigger.show {
+    opacity: 1;
+
+}
+
+#main-back.show {
+    background: linear-gradient(to right, #EFD7BD, #efd7bd00) no-repeat;
+}
+
+#main-back.show .main-arrow-image {
+
+    background: url("/images/arrow.svg") no-repeat;
+    background-size: contain;
+    width: 34px;
+    height: 54px;
+    transform: rotate(180deg);
+}
+
+#main-next.show {
+    background: linear-gradient(to left, #EFD7BD, #efd7bd00) no-repeat;
+}
+
+#main-next.show .main-arrow-image {
+    background: url("/images/arrow.svg") no-repeat;
+    background-size: contain;
+    width: 34px;
+    height: 54px;
+}
+
+
 @media (orientation: portrait) {
     #main {
         max-width: 1240px;
